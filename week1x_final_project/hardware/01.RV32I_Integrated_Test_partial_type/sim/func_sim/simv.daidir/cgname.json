@@ -1,0 +1,44 @@
+{
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        1
+    ],
+    "cla_8bit": [
+        "cla_8bit",
+        "c8pr1",
+        "module",
+        17
+    ],
+    "full_adder": [
+        "full_adder",
+        "BEdzp",
+        "module",
+        18
+    ],
+    "mux3": [
+        "mux3",
+        "rsgQu",
+        "module",
+        19
+    ],
+    "flopenr": [
+        "flopenr",
+        "rCRUN",
+        "module",
+        20
+    ],
+    "cpu_tb": [
+        "cpu_tb",
+        "mvuYT",
+        "module",
+        15
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        16
+    ]
+}
