@@ -15,7 +15,7 @@ module MEM_WB(
     output reg [1:0]  ResultSrcW
 );
 
-    always @(posedge clk or negedge n_rst) begin
+    always @( posedge clk or negedge n_rst) begin//posedge clk or
         if (!n_rst) begin
             PCPlus4W <= 0;
             ReadDataW <= 0;

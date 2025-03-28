@@ -39,7 +39,7 @@ module IF_ID(
     output reg [31:0] PCPlus4D  // PC+4 to ID stage
 );
 
-    always @(posedge clk or negedge n_rst) begin
+    always @(posedge clk or negedge n_rst) begin//posedge clk or
         if (!n_rst) begin
             InstrD <= 0;
             PCD <= 0;

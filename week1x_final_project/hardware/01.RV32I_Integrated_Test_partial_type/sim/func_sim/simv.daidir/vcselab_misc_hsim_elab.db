@@ -1,6 +1,6 @@
 psSimBaseName                      	simv
 psLogFileName                      	NULL
-pDaiDir                            	/home2/s2_student13/project/2024fa_cpu_design/week1x_final_project/hardware/01.RV32I_Integrated_Test_partial_type/sim/func_sim/simv.daidir
+pDaiDir                            	/home1/socuser10/2025Soc/week1x_final_project/hardware/01.RV32I_Integrated_Test_partial_type/sim/func_sim/simv.daidir
 destPath                           	csrc/
 fSharedMaster                      	0
 fHsimPCSharedLibSpecified          	0

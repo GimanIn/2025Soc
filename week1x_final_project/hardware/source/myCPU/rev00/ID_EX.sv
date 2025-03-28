@@ -41,7 +41,7 @@ module ID_EX(
     output reg JalrE               // JALR control signal to EX stage
 );
 
-    always @(posedge clk or negedge n_rst) begin
+    always @(posedge clk or negedge n_rst) begin//posedge clk or
         if (!n_rst) begin
             PCPlus4E <= 0;
             RD1E <= 0;

@@ -1,0 +1,314 @@
+debImport "-sv" "-f" "run.f"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+verdiWindowResize -win $_Verdi_1 "420" "260" "3081" "1816"
+schCreateWindow -delim "." -win $_nSchema1 -scope "flopenr"
+verdiSetActWin -win $_nSchema_2
+schDisplayLiberty -win $_nSchema2
+schDisplayLiberty -win $_nSchema2
+srcTBBTreeSelect -win $_nTrace1 -path "SMU_RV32I_System"
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+srcTBBTreeSelect -win $_nTrace1 -path "SMU_RV32I_System"
+srcTBBTreeSelect -win $_nTrace1 -path "SMU_RV32I_System"
+srcTBBTreeSelect -win $_nTrace1 -path "SMU_RV32I_System"
+srcTBTreeAction -win $_nTrace1 -path "SMU_RV32I_System"
+schCreateWindow -delim "." -win $_nSchema1 -scope "cpu_tb.CPU"
+verdiSetActWin -win $_nSchema_3
+schSelect -win $_nSchema3 -inst "imem"
+schPushViewIn -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "icpu"
+schPushViewIn -win $_nSchema3
+schSelect -win $_nSchema3 -inst "i_datapath"
+schPushViewIn -win $_nSchema3
+schZoom {76879} {-4094} {109447} {19987} -win $_nSchema3
+schSelect -win $_nSchema3 -signal "SrcAE\[31:0\]"
+wvCreateWindow
+verdiSetActWin -win $_nWave4
+wvSetPosition -win $_nWave4 {("G1" 0)}
+wvOpenFile -win $_nWave4 \
+           {/home1/socuser10/2025Soc/week1x_final_project/hardware/01.RV32I_Integrated_Test_partial_type/sim/func_sim/wave.fsdb}
+schSelect -win $_nSchema3 -signal "SrcAE\[31:0\]"
+verdiSetActWin -win $_nSchema_3
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "SrcBE\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "ALUControlE\[4:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "ALUResultE\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+wvSetCursor -win $_nWave4 58.098652 -snap {("G2" 0)}
+verdiSetActWin -win $_nWave4
+wvZoomAll -win $_nWave4
+schDeselectAll -win $_nSchema3
+verdiSetActWin -win $_nSchema_3
+wvSelectGroup -win $_nWave4 {G1}
+verdiSetActWin -win $_nWave4
+wvSelectSignal -win $_nWave4 {( "G1" 2 )} 
+wvSelectSignal -win $_nWave4 {( "G1" 1 )} 
+wvSelectSignal -win $_nWave4 {( "G1" 1 4 )} 
+wvSelectSignal -win $_nWave4 {( "G1" 2 )} 
+wvSelectSignal -win $_nWave4 {( "G1" 1 )} 
+wvSelectSignal -win $_nWave4 {( "G1" 1 2 3 4 )} 
+wvCut -win $_nWave4
+wvSetPosition -win $_nWave4 {("G1" 0)}
+schSelect -win $_nSchema3 -signal "RegWriteW"
+verdiSetActWin -win $_nSchema_3
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "RdW\[4:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "ResultW\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+wvZoomAll -win $_nWave4
+verdiSetActWin -win $_nWave4
+verdiSetActWin -win $_nSchema_3
+schDeselectAll -win $_nSchema3
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+debReload
+verdiSetActWin -win $_nSchema_3
+wvSetCursor -win $_nWave4 159.379228 -snap {("G2" 0)}
+verdiSetActWin -win $_nWave4
+wvSelectSignal -win $_nWave4 {( "G1" 1 )} 
+wvCut -win $_nWave4
+wvSetPosition -win $_nWave4 {("G2" 0)}
+wvSetPosition -win $_nWave4 {("G1" 2)}
+wvSelectGroup -win $_nWave4 {G1}
+wvSelectSignal -win $_nWave4 {( "G1" 1 )} 
+wvCut -win $_nWave4
+wvSetPosition -win $_nWave4 {("G2" 0)}
+wvSetPosition -win $_nWave4 {("G1" 1)}
+wvSelectSignal -win $_nWave4 {( "G1" 1 )} 
+wvCut -win $_nWave4
+wvSetPosition -win $_nWave4 {("G2" 0)}
+wvSetPosition -win $_nWave4 {("G1" 0)}
+schSelect -win $_nSchema3 -signal "RD1E\[31:0\]"
+verdiSetActWin -win $_nSchema_3
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+verdiSetActWin -win $_nWave4
+wvSetFileTimeRange -win $_nWave4 -time_unit 1n 0 1010
+schDeselectAll -win $_nSchema3
+verdiSetActWin -win $_nSchema_3
+schSelect -win $_nSchema3 -signal "RD1E\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+debReload
+schSelect -win $_nSchema3 -signal "RD1E\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "RD2E\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "SrcAE\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "SrcBE\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "ALUControlE\[4:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "ALUResultE\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+wvSetCursor -win $_nWave4 43.984290 -snap {("G2" 0)}
+verdiSetActWin -win $_nWave4
+wvZoomAll -win $_nWave4
+verdiSetActWin -win $_nSchema_3
+schDeselectAll -win $_nSchema3
+wvSelectSignal -win $_nWave4 {( "G1" 1 )} 
+verdiSetActWin -win $_nWave4
+wvSelectSignal -win $_nWave4 {( "G1" 1 2 3 4 5 6 )} 
+wvCut -win $_nWave4
+wvSetPosition -win $_nWave4 {("G1" 0)}
+schSelect -win $_nSchema3 -instpin "rf" "wa\[4:0\]"
+verdiSetActWin -win $_nSchema_3
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -instport "rf" "wd\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -instport "rf" "we"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+wvSetCursor -win $_nWave4 342.464748 -snap {("G2" 0)}
+verdiSetActWin -win $_nWave4
+wvZoomAll -win $_nWave4
+wvZoomAll -win $_nWave4
+wvSetCursor -win $_nWave4 773.189846 -snap {("G2" 0)}
+wvSelectSignal -win $_nWave4 {( "G1" 1 )} 
+wvSelectSignal -win $_nWave4 {( "G1" 1 2 3 )} 
+wvCut -win $_nWave4
+wvSetPosition -win $_nWave4 {("G1" 0)}
+schSelect -win $_nSchema3 -signal "RdW\[4:0\]"
+verdiSetActWin -win $_nSchema_3
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "RegWriteW"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "ResultW\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+wvSetCursor -win $_nWave4 528.103253 -snap {("G2" 0)}
+verdiSetActWin -win $_nWave4
+wvZoomAll -win $_nWave4
+schDeselectAll -win $_nSchema3
+verdiSetActWin -win $_nSchema_3
+wvSetCursor -win $_nWave4 205.697676 -snap {("G2" 0)}
+verdiSetActWin -win $_nWave4
+schSelect -win $_nSchema3 -signal "PCPlus4W\[31:0\]"
+verdiSetActWin -win $_nSchema_3
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+wvSetCursor -win $_nWave4 629.857955 -snap {("G2" 0)}
+verdiSetActWin -win $_nWave4
+schSelect -win $_nSchema3 -signal "ALUResultW\[31:0\]"
+verdiSetActWin -win $_nSchema_3
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+wvSetCursor -win $_nWave4 373.829996 -snap {("G2" 0)}
+verdiSetActWin -win $_nWave4
+verdiSetActWin -win $_nSchema_3
+schSelect -win $_nSchema3 -signal "ALUResultE\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+wvSetCursor -win $_nWave4 759.695495 -snap {("G2" 0)}
+verdiSetActWin -win $_nWave4
+wvSelectSignal -win $_nWave4 {( "G1" 1 )} 
+wvSelectSignal -win $_nWave4 {( "G1" 1 2 3 4 5 6 )} 
+wvCut -win $_nWave4
+wvSetPosition -win $_nWave4 {("G1" 0)}
+schSelect -win $_nSchema3 -signal "ALUResultE\[31:0\]"
+verdiSetActWin -win $_nSchema_3
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "ALUResultM\[1:0\]"
+schSelect -win $_nSchema3 -signal "ALUResultW\[31:0\]"
+schZoomOut -win $_nSchema3
+schZoomOut -win $_nSchema3
+schDeselectAll -win $_nSchema3
+schZoom {8516} {-37487} {145353} {43806} -win $_nSchema3
+schZoom {25424} {-24079} {83241} {35196} -win $_nSchema3
+schZoom {25358} {-18162} {62764} {34217} -win $_nSchema3
+schSelect -win $_nSchema3 -signal "ALUResultM\[1:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schZoom {36656} {-2521} {52189} {25304} -win $_nSchema3
+schSelect -win $_nSchema3 -signal "ALUResultW\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "ResultW\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "ResultSrcW\[1:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "RegWriteW"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "RdW\[4:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+wvSetCursor -win $_nWave4 290.310905 -snap {("G2" 0)}
+verdiSetActWin -win $_nWave4
+wvZoomAll -win $_nWave4
+wvSetCursor -win $_nWave4 241.074759 -snap {("G2" 0)}
+wvZoomAll -win $_nWave4
+schDeselectAll -win $_nSchema3
+verdiSetActWin -win $_nSchema_3
+schSelect -win $_nSchema3 -signal "RD1D\[31:0\]"
+wvSetCursor -win $_nWave4 54.342117 -snap {("G2" 0)}
+verdiSetActWin -win $_nWave4
+wvSelectGroup -win $_nWave4 {G1}
+wvSelectSignal -win $_nWave4 {( "G1" 1 )} 
+wvSelectSignal -win $_nWave4 {( "G1" 1 2 3 4 5 6 7 )} 
+wvCut -win $_nWave4
+wvSetPosition -win $_nWave4 {("G1" 0)}
+schSelect -win $_nSchema3 -signal "RD1D\[31:0\]"
+verdiSetActWin -win $_nSchema_3
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schDeselectAll -win $_nSchema3
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+debReload
+schSelect -win $_nSchema3 -signal "RD1D\[31:0\]"
+verdiSetActWin -win $_nSchema_3
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "RD2D\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+wvSetCursor -win $_nWave4 617.822453 -snap {("G2" 0)}
+verdiSetActWin -win $_nWave4
+wvZoomAll -win $_nWave4
+wvSetCursor -win $_nWave4 796.531427 -snap {("G2" 0)}
+schDeselectAll -win $_nSchema3
+verdiSetActWin -win $_nSchema_3
+schSelect -win $_nSchema3 -signal "RD2D\[31:0\]"
+schSelect -win $_nSchema3 -toggle -signal "RD1D\[31:0\]"
+schZoomOut -win $_nSchema3
+schZoom {66794} {7400} {85505} {29090} -win $_nSchema3
+schSelect -win $_nSchema3 -signal "RD1E\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "RD2E\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schDeselectAll -win $_nSchema3
+schSelect -win $_nSchema3 -signal "SrcBE\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "SrcAE\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema3 -signal "ALUResultE\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+verdiSetActWin -win $_nWave4
+wvSetCursor -win $_nWave4 782.864262 -snap {("G2" 0)}
+wvSetCursor -win $_nWave4 744.345201 -snap {("G2" 0)}
+wvSetCursor -win $_nWave4 765.388022 -snap {("G2" 0)}
+wvSetCursor -win $_nWave4 762.534758 -snap {("G1" 6)}
+wvSetCursor -win $_nWave4 451.529001 -snap {("G1" 7)}
+wvSetCursor -win $_nWave4 671.230315 -snap {("G1" 6)}
+wvZoom -win $_nWave4 550.679919 669.803683
+wvSetCursor -win $_nWave4 640.307622 -snap {("G1" 6)}
+wvSetCursor -win $_nWave4 560.829832 -snap {("G1" 4)}
+wvZoomAll -win $_nWave4
+schSelect -win $_nSchema3 -signal "ALUControlE\[4:0\]"
+verdiSetActWin -win $_nSchema_3
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave4
+verdiWindowResize -win $_Verdi_1 "205" "126" "1920" "1016"
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "i_datapath"
+schPushViewIn -win $_nSchema3
+verdiHideMenus -win $_Verdi_1 -on
+verdiWindowResize -win $_Verdi_1 -54 "19" "791" "1016"
+verdiWindowResize -win $_Verdi_1 -54 "130" "791" "905"
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+debReload
+verdiWindowResize -win $_Verdi_1 "674" "82" "1148" "905"
+wvSetCursor -win $_nWave4 550.000000
+verdiSetActWin -win $_nWave4
+wvDisplayGridCount -win $_nWave4 -off
+wvGetSignalClose -win $_nWave4
+wvReloadFile -win $_nWave4
+verdiSetActWin -win $_nSchema_3
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+debReload
+verdiWindowResize -win $_Verdi_1 "340" "82" "1482" "905"
+verdiSetActWin -win $_nSchema_3
+schZoom {26813} {-26} {52590} {25875} -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "i_datapath"
+schPushViewIn -win $_nSchema3
+schSelect -win $_nSchema3 -signal "ALUResultM\[1:0\]"
+debExit

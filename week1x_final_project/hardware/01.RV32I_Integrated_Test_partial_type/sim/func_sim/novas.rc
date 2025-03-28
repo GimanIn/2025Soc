@@ -225,9 +225,11 @@ Orientation = Landscape
 [FileBrowser]
 nWaveRestoreRCDirHistory = "\"/home/user/project/rvfpga/RVfpga/RVfpgaEL2/RVfpga_NexysA7-NoDDR/vcs/signal.rc\""
 nWaveOpenFsdbDirHistory = "\"/home/user/project/rvfpga/RVfpga/RVfpgaEL2/RVfpga_NexysA7-NoDDR/vcs/wave.fsdb\"" "\"/home/user/project/tsnlab/iree_npu/03.VeeR-EL2_DMA/05.ps_slave_bram_test/sim/wave_Error_A.fsdb\"" "\"/home/user/project/tsnlab/iree_npu/03.VeeR-EL2_DMA/06.ps_slave_bram_\
-test/sim/wave_FPGA_Error_A.fsdb\"" "\"/home/user/lecture/2024fa_cpu_design/week1x_final_project/hardware/01.RV32I_Integrated_Test_partial_type/sim/func_sim/wave.fsdb\""
+test/sim/wave_FPGA_Error_A.fsdb\"" "\"/home/user/lecture/2024fa_cpu_design/week1x_final_project/hardware/01.RV32I_Integrated_Test_partial_type/sim/func_sim/wave.fsdb\"" "\"/home1/socuser10/2025Soc/week1x_final_project/hardware/01.RV32I_Integrated_Test_part\
+ial_type/sim/func_sim/wave.fsdb\""
 [Form]
 version = Verdi_S-2021.09-SP2-9
+schLoadSym.fm = 100,100,364,353
 [General]
 autoSaveSession = FALSE
 TclAutoSource = 
@@ -269,11 +271,12 @@ windowLayout = 0 0 804 500 182 214 804 148
 import_filter = *.v; *.vc; *.f
 designTreeFont = *-adobe-courier-medium-r-*-*-12-*-*-*-*-*-iso8859-*
 import_filter_vhdl = *.vhd; *.vhdl; *.f
-import_default_language = Verilog
 import_filter_verilog = *.v; *.vc; *.f
 simulation_file_type = 
 PrefetchViewableAnnot = TRUE
 ProfileTime = FALSE
+import_default_language = Verilog
+import_from = source
 [Hier]
 filterTimeout = 1500
 [ImportLiberty]
@@ -394,9 +397,14 @@ saveSigDlg = 1583,648,551,386
 unknownSave = 728,448,461,245
 ChangeColorDialog = 802,417,313,307
 SCHFindForm_base = 717,357,483,428
+Verdi_OpenFile = 665,402,590,340
+dockContainerWindowTitleDialog = 1610,1062,620,111
+qWaveSignalDialog = 1570,973,800,479
+openFileDlg = 1659,963,602,483
+QwInfoMsgDlg = 575,388,750,250
 QwWarnMsgDlg = 659,390,600,250
-openFileDlg = 348,145,602,483
-QwUserAskDlg = 548,328,324,134
+QwUserAskDlg = 930,501,324,134
+importDesignForm = 807,384,715,574
 [Relationship]
 hideRecursiceNode = FALSE
 [Safety]
@@ -410,9 +418,9 @@ HighlightSafetyObject = TRUE
 [Session Cache]
 4 = string (session file name)
 5 = string (session file name)
-1 = /home/user/lecture/2024fa_cpu_design/week1x_final_project/hardware/01.RV32I_Integrated_Test_partial_type/sim/func_sim/Verdi-UltraLog/novas_autosave.ses
-2 = /home/user/lecture/2024fa_cpu_design/week1x_final_project/hardware/01.RV32I_Integrated_Test_partial_type/sim/func_sim/VerdiLog/novas_autosave.ses
 3 = /home/user/project/rvfpga/RVfpga/RVfpgaEL2/RVfpga_NexysA7-NoDDR/vcs/Verdi-UltraLog/novas_autosave.ses
+1 = /home1/socuser10/2025Soc/week1x_final_project/hardware/01.RV32I_Integrated_Test_partial_type/sim/func_sim/Verdi-UltraLog/novas_autosave.ses
+2 = /home1/socuser10/2025Soc/week1x_final_project/hardware/01.RV32I_Integrated_Test_partial_type/sim/func_sim/verdiLog/novas_autosave.ses
 [Signal List]
 sigListBackgroundColor = ID_GRAY6
 sigListForegroundColor = ID_BLACK
@@ -607,7 +615,7 @@ pdmlMacro = ID_BLACK
 font = COURIER12
 annotFont = Helvetica_M_R_10
 [Text.1]
-viewport = 0 0 1298 700 45
+viewport = 341 70 1482 905 45
 [TextPrinter]
 Orientation = Landscape
 Indicator = FALSE
@@ -698,9 +706,9 @@ isOneSearchVisible = TRUE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column0]
-name = Severity
+name = Type
 width = 60
-visualIndex = 1
+visualIndex = 3
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
@@ -722,9 +730,9 @@ visualIndex = 2
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
-name = Type
+name = Severity
 width = 60
-visualIndex = 3
+visualIndex = 1
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [Vi]
@@ -809,8 +817,8 @@ scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
 maskTPropagation = TRUE
-getSignalForm = 0 0 800 479 100 30 100 30
-viewPort = 0 25 1298 231 193 65
+getSignalForm = 1570 936 800 479 164 381 390 89
+viewPort = 0 25 1482 86 193 144
 legendBackground = -c ID_BLACK
 valueBackground = -c ID_BLACK
 curveBackground = -c ID_BLACK
@@ -976,11 +984,11 @@ printBasic = 1 0 0 FALSE FALSE
 printDest = -printer {}
 printSignature = {%f %h %t} {}
 curveWindow_Drag&Drop_Mode = TRUE
-RecentFile1 = "\"/home/user/lecture/2024fa_cpu_design/week1x_final_project/hardware/01.RV32I_Integrated_Test_partial_type/sim/func_sim/wave.fsdb\""
-RecentFile2 = "\"/home/user/project/tsnlab/iree_npu/03.VeeR-EL2_DMA/06.ps_slave_bram_test/sim/wave_FPGA_Error_A.fsdb\""
-RecentFile3 = "\"/home/user/project/tsnlab/iree_npu/03.VeeR-EL2_DMA/05.ps_slave_bram_test/sim/wave_Error_A.fsdb\""
-RecentFile4 = "\"/home/user/project/rvfpga/RVfpga/RVfpgaEL2/RVfpga_NexysA7-NoDDR/vcs/signal.rc\""
-RecentFile5 = "\"/home/user/project/rvfpga/RVfpga/RVfpgaEL2/RVfpga_NexysA7-NoDDR/vcs/wave.fsdb\""
+RecentFile1 = "\"/home1/socuser10/2025Soc/week1x_final_project/hardware/01.RV32I_Integrated_Test_partial_type/sim/func_sim/wave.fsdb\""
+RecentFile2 = "\"/home/user/lecture/2024fa_cpu_design/week1x_final_project/hardware/01.RV32I_Integrated_Test_partial_type/sim/func_sim/wave.fsdb\""
+RecentFile3 = "\"/home/user/project/tsnlab/iree_npu/03.VeeR-EL2_DMA/06.ps_slave_bram_test/sim/wave_FPGA_Error_A.fsdb\""
+RecentFile4 = "\"/home/user/project/tsnlab/iree_npu/03.VeeR-EL2_DMA/05.ps_slave_bram_test/sim/wave_Error_A.fsdb\""
+RecentFile5 = "\"/home/user/project/rvfpga/RVfpga/RVfpgaEL2/RVfpga_NexysA7-NoDDR/vcs/signal.rc\""
 open_file_time_range = FALSE
 legend_window_font = -f COURIER12 -c ID_CYAN5
 value_window_font = -f COURIER12 -c ID_CYAN5
@@ -1083,7 +1091,7 @@ InputPinStatus = 1
 OutputPinStatus = 2
 RevisedComponentColor = ID_BLUE5
 SpareCellColor = ID_RED5
-UserName = user
+UserName = socuser10
 CommentFormat = Novas ECO updated by ${UserName} ${Date} ${Time} 
 PrefixN = eco_n
 PrefixP = eco_p
@@ -1599,7 +1607,7 @@ SubScopeFontAutoAdjust = TRUE
 clockTreeBrowser-MarkerColor = ID_YELLOW5
 clockTreeBrowser-SelectedColor = ID_BLUE5
 clockTreeBrowser-ViolationColor = ID_RED5
-viewport = 0 25 869 285
+viewport = 0 25 1219 654
 [schematics_print]
 Signature = FALSE
 DesignName = PCU
@@ -1735,7 +1743,7 @@ AddImportArgument = FALSE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -s
 [wave.0]
-viewPort = 0 25 1298 231 193 65
+viewPort = 0 25 1482 86 193 144
 [wave.1]
 viewPort = 127 219 960 332 100 65
 [wave.2]

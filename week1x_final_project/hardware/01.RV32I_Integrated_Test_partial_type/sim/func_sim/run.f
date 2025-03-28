@@ -10,7 +10,7 @@
 ../../../source/myCPU/rev00/aludec.sv
 ../../../source/myCPU/rev00/alu.sv
 ../../../source/myCPU/rev00/controller.sv
-../../../source/myCPU/rev00/riscvsingle.sv
+../../../source/myCPU/rev00/riscvpipeline.sv
 ../../../source/myCPU/rev00/reg_file_async.v
 ../../../source/myCPU/rev00/ID_EX.sv
 ../../../source/myCPU/rev00/EX_MEM.sv

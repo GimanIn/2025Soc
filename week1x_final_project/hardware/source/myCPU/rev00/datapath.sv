@@ -160,7 +160,9 @@ module datapath(
         .Rs2E(Rs2E)
     );
 
-    assign WriteDataE = RD2E_w;
+    //assign WriteDataE = RD2E_w;
+    assign WriteDataE = RD2E; // 
+
 
     EX_MEM u_EX_MEM(
         .clk(clk),
@@ -214,14 +216,26 @@ module datapath(
         .out(PC_nextF)
     );
     // IF Stage
-    flopr #(.RESET_VALUE(RESET_PC)
+    /*flopr #(.RESET_VALUE(RESET_PC)
     ) u_pc_register(
         .clk(clk),
         .n_rst(n_rst),
         .d(PC_nextF),
         .q(PCF)
         //.StallF(~StallF)
+    );*/
+
+    flopenr # (
+        .RESET_VALUE (RESET_PC)
+    ) u_pc_register(
+        .clk(clk),
+        .n_rst(n_rst),
+        .en(lstart_exec),  // .en(lwStall),
+        .d(PC_nextF),
+        .q(PCF)
     );
+
+
 
     adder u_pc_plus4(
         .a(PCF),
@@ -271,7 +285,7 @@ module datapath(
         .ra2        (InstrD[24:20]),
         .wa         (RdW), //Rd Instr[11:7]
         .wd         (ResultW),
-        .rd1        (RD1D   ), //srca
+        .rd1        (RD1D ), //srca
         .rd2        (RD2D)
     );
 
@@ -293,7 +307,7 @@ module datapath(
     );*/
 
     mux3 u_aluA_mux3(
-        .in0(RD1E_w), //RD1D , srca
+        .in0(RD1E), //RD1D , srca, RD1E_w
         .in1(PCE),
         .in2(0),
         .sel(ALUSrcAE),  
@@ -303,7 +317,7 @@ module datapath(
 
     //Src B select mux
     mux2 u_aluB_mux2(
-        .in0(RD2E_w), //RD1D 
+        .in0(RD2E), //RD1D , RD2E_w
         .in1(ImmExtE),
         .sel(ALUSrcBE),
         .out(SrcBE)

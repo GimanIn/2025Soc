@@ -35,9 +35,9 @@
 run.f
 45
 which_declare=declare -f
-XDG_SESSION_ID=2137
-XDG_RUNTIME_DIR=/run/user/1016
-XDG_DATA_DIRS=/home2/s2_student13/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+XDG_SESSION_ID=1020
+XDG_RUNTIME_DIR=/run/user/1014
+XDG_DATA_DIRS=/home1/socuser10/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 VMR_MODE_FLAG=64
 VERDI_HOME=/tools/synopsys_2021/verdi/S-2021.09-SP2-9
 VCS_PATHMAP_PRELOAD_DONE=1
@@ -52,9 +52,9 @@ VCS_ARCH=linux64
 UNAME=/bin/uname
 TOOL_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64
 SYNOPSYS_LC_ROOT=/tools/synopsys_2021/lc/S-2021.06-SP5
-SSH_TTY=/dev/pts/30
-SSH_CONNECTION=182.230.93.220 65118 192.168.1.151 22
-SSH_CLIENT=182.230.93.220 65118 22
+SSH_TTY=/dev/pts/15
+SSH_CONNECTION=203.237.200.26 55418 192.168.0.170 22
+SSH_CLIENT=203.237.200.26 55418 22
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
 SNPS_VCS_CLANG_PATH=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/clang
 SNPS_INTERNAL_VCS_LINUX_OS=linux
@@ -64,8 +64,8 @@ PT_HOME=/tools/synopsys_2021/prime/S-2021.06-SP5-2
 OVA_UUM=0
 OS_LDFLAGS=
 MFLAGS=
-MAKE_TERMOUT=/dev/pts/30
-MAKE_TERMERR=/dev/pts/30
+MAKE_TERMOUT=/dev/pts/15
+MAKE_TERMERR=/dev/pts/15
 MAKELEVEL=1
 MAKEFLAGS=
 LESSOPEN=||/usr/bin/lesspipe.sh %s
@@ -77,37 +77,37 @@ FM_HOME=/tools/synopsys_2021/fm/S-2021.06-SP5
 DVE_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/gui/dve
 DEBUGINFOD_URLS=https://debuginfod.centos.org/ 
 DC_HOME=/tools/synopsys_2021/syn/S-2021.06-SP5-5
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-bofBUyAVTd,guid=c8cb1ac28f4d6cbaeb25bf77675ac091
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-eZrpGBGpsh,guid=ccda2c5a987de11bdf9bb7af67e5e85c
 BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@_}
 0
 0
 28
 1732689370 mem_path.vh
 1732689370 opcode.vh
-1732689370 ../../testbench/cpu_tb.v
+1742807236 ../../testbench/cpu_tb.v
 1729211387 ../../../source/myCPU/rev00/building_blocks/flopenr.sv
 1729211387 ../../../source/myCPU/rev00/building_blocks/flopr.sv
 1730982176 ../../../source/myCPU/rev00/building_blocks/extend.sv
 1729211387 ../../../source/myCPU/rev00/building_blocks/mux2.sv
 1729211387 ../../../source/myCPU/rev00/building_blocks/mux3.sv
 1729928872 ../../../source/myCPU/rev00/building_blocks/adder.sv
-1733774000 ../../../source/myCPU/rev00/building_blocks/BE_logic.sv
-1734001248 ../../../source/myCPU/rev00/MEM_WB.sv
-1733767816 ../../../source/myCPU/rev00/IF_ID.sv
-1733771351 ../../../source/myCPU/rev00/EX_MEM.sv
-1734000352 ../../../source/myCPU/rev00/ID_EX.sv
-1729211387 ../../../source/myCPU/rev00/reg_file_async.v
-1734004001 ../../../source/myCPU/rev00/riscvsingle.sv
-1734004080 ../../../source/myCPU/rev00/controller.sv
+1743123354 ../../../source/myCPU/rev00/building_blocks/BE_logic.sv
+1742801632 ../../../source/myCPU/rev00/MEM_WB.sv
+1742801635 ../../../source/myCPU/rev00/IF_ID.sv
+1742801639 ../../../source/myCPU/rev00/EX_MEM.sv
+1742801645 ../../../source/myCPU/rev00/ID_EX.sv
+1742807144 ../../../source/myCPU/rev00/reg_file_async.v
+1743123006 ../../../source/myCPU/rev00/riscvpipeline.sv
+1742808137 ../../../source/myCPU/rev00/controller.sv
 1731025577 ../../../source/myCPU/rev00/alu.sv
 1734004125 ../../../source/myCPU/rev00/aludec.sv
 1733772838 ../../../source/myCPU/rev00/branch_logic.sv
-1733774581 ../../../source/myCPU/rev00/maindec.sv
-1734003737 ../../../source/myCPU/rev00/datapath.sv
+1743126299 ../../../source/myCPU/rev00/maindec.sv
+1742805801 ../../../source/myCPU/rev00/datapath.sv
 1731030508 ../../../source/myCPU/rev00/ASYNC_RAM_DP_WBE.v
-1734000476 ../../../source/myCPU/rev00/SMU_RV32I_System.v
+1743123445 ../../../source/myCPU/rev00/SMU_RV32I_System.v
 1732689370 ./sim_define.v
-1734003512 run.f
+1743123405 run.f
 1680083496 /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/verdi.tab
 1681355180 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/vcsdp_lite.tab
 4
@@ -115,5 +115,5 @@ BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty
 1681355912 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/liberrorinf.so
 1681355870 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libsnpsmalloc.so
 1681355909 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libvfs.so
-1734004128 simv.daidir
+1743126529 simv.daidir
 -1 partitionlib

@@ -58,7 +58,7 @@ module SMU_RV32I_System (
 
   wire n_rst = reset_ff;
 
-  riscvsingle #(
+  riscvpipeline #(
       .RESET_PC(RESET_PC)
     ) icpu (
     .clk(clk),

@@ -19,7 +19,7 @@ module EX_MEM(
     output reg [1:0] ResultSrcM  // Memory to register control
 );
 
-    always @(posedge clk or negedge n_rst) begin
+    always @(posedge clk or negedge n_rst) begin//posedge clk or 
         if (!n_rst) begin
             PCPlus4M <= 0;
             ALUResultM <= 0;

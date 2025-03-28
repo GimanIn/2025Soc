@@ -90,7 +90,8 @@ module controller(
         .ALUSrcA(ALUSrcA),       // ALU A 입력 제어 신호 출력
         .ALUSrcB(ALUSrcB),       // ALU B 입력 제어 신호 출력
         .ImmSrc(ImmSrc),         // Immediate 소스 제어 신호 출력
-        .RegWrite(RegWrite)      // 레지스터 쓰기 신호 출력
+        .RegWrite(RegWrite),      // 레지스터 쓰기 신호 출력
+        .ALUop(ALUop)
     );
     
     // aludec 인스턴스

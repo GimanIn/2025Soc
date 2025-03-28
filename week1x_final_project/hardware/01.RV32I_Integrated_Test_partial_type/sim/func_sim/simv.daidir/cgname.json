@@ -23,11 +23,11 @@
         "module",
         19
     ],
-    "flopenr": [
-        "flopenr",
-        "rCRUN",
+    "flopr": [
+        "flopr",
+        "RCrG2",
         "module",
-        20
+        14
     ],
     "cpu_tb": [
         "cpu_tb",
