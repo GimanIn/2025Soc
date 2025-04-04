@@ -2,7 +2,7 @@ Magic 271485
 Revision Verdi_S-2021.09-SP2-9
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 0 25 1482 86 193 144
+viewPort 0 25 1920 290 193 144
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
@@ -16,8 +16,8 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 0.000000 423.487016
-cursor 550.000000
+zoom 0.000000 2232.100000
+cursor 10.000000
 marker 0.000000
 
 ; user define markers
@@ -25,7 +25,7 @@ marker 0.000000
 ; visible top row signal index
 top 0
 ; marker line index
-markerPos 8
+markerPos 5
 
 ; event list
 ; addEvent event_name event_expression
@@ -47,14 +47,11 @@ curSTATUS ByChange
 
 addGroup "G1"
 activeDirFile "" "/home1/socuser10/2025Soc/week1x_final_project/hardware/01.RV32I_Integrated_Test_partial_type/sim/func_sim/wave.fsdb"
-addSignal -h 14 /cpu_tb/CPU/icpu/i_datapath/RD1D[31:0]
-addSignal -h 14 -holdScope RD2D[31:0]
-addSignal -h 14 -holdScope RD1E[31:0]
-addSignal -h 14 -holdScope RD2E[31:0]
-addSignal -h 14 -holdScope SrcBE[31:0]
-addSignal -h 14 -holdScope SrcAE[31:0]
-addSignal -h 14 -holdScope ALUResultE[31:0]
-addSignal -h 14 -holdScope ALUControlE[4:0]
+addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/RD2D[31:0]
+addSignal -h 15 -holdScope RD2E[31:0]
+addSignal -h 15 -holdScope WriteDataM[31:0]
+addSignal -h 15 -holdScope WriteDataM[31:0]
+addSignal -h 15 -holdScope MemWriteM
 addGroup "G2"
 
 ; getSignalForm Scope Hierarchy Status

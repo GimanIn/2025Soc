@@ -400,11 +400,11 @@ SCHFindForm_base = 717,357,483,428
 Verdi_OpenFile = 665,402,590,340
 dockContainerWindowTitleDialog = 1610,1062,620,111
 qWaveSignalDialog = 1570,973,800,479
-openFileDlg = 1659,963,602,483
 QwInfoMsgDlg = 575,388,750,250
+openFileDlg = 658,329,602,483
 QwWarnMsgDlg = 659,390,600,250
-QwUserAskDlg = 930,501,324,134
-importDesignForm = 807,384,715,574
+importDesignForm = 601,284,715,574
+QwUserAskDlg = 798,507,324,130
 [Relationship]
 hideRecursiceNode = FALSE
 [Safety]
@@ -615,7 +615,7 @@ pdmlMacro = ID_BLACK
 font = COURIER12
 annotFont = Helvetica_M_R_10
 [Text.1]
-viewport = 341 70 1482 905 45
+viewport = -1 26 1920 1016 45
 [TextPrinter]
 Orientation = Landscape
 Indicator = FALSE
@@ -706,33 +706,33 @@ isOneSearchVisible = TRUE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column0]
+name = Severity
+width = 60
+visualIndex = 1
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
 name = Type
 width = 60
 visualIndex = 3
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
 name = Message
 width = 2000
 visualIndex = 4
 isHidden = FALSE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
 name = Time
 width = 60
 visualIndex = 0
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
 name = Code
 width = 60
 visualIndex = 2
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
-name = Severity
-width = 60
-visualIndex = 1
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [Vi]
@@ -818,7 +818,7 @@ open_file_dir
 open_rc_file_dir
 maskTPropagation = TRUE
 getSignalForm = 1570 936 800 479 164 381 390 89
-viewPort = 0 25 1482 86 193 144
+viewPort = 0 25 1920 290 193 144
 legendBackground = -c ID_BLACK
 valueBackground = -c ID_BLACK
 curveBackground = -c ID_BLACK
@@ -1607,7 +1607,7 @@ SubScopeFontAutoAdjust = TRUE
 clockTreeBrowser-MarkerColor = ID_YELLOW5
 clockTreeBrowser-SelectedColor = ID_BLUE5
 clockTreeBrowser-ViolationColor = ID_RED5
-viewport = 0 25 1219 654
+viewport = 0 25 1583 719
 [schematics_print]
 Signature = FALSE
 DesignName = PCU
@@ -1743,7 +1743,7 @@ AddImportArgument = FALSE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -s
 [wave.0]
-viewPort = 0 25 1482 86 193 144
+viewPort = 0 25 1920 290 193 144
 [wave.1]
 viewPort = 127 219 960 332 100 65
 [wave.2]

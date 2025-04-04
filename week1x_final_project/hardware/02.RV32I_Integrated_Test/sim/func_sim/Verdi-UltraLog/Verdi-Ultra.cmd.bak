@@ -1,0 +1,107 @@
+verdiSetActWin -win $_OneSearch
+debImport "-sv" "-f" "run.f"
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcTBBTreeSelect -win $_nTrace1 -path "SMU_RV32I_System"
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+schCreateWindow -delim "." -win $_nSchema1 -scope "flopr"
+verdiSetActWin -win $_nSchema_2
+schPopViewUp -win $_nSchema2
+schPopViewUp -win $_nSchema2
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+srcTBBTreeSelect -win $_nTrace1 -path "ASYNC_RAM_DP_WBE"
+srcTBBTreeSelect -win $_nTrace1 -path "reg_file_async"
+schCreateWindow -delim "." -win $_nSchema1 -scope "flopr"
+verdiSetActWin -win $_nSchema_3
+srcTBBTreeSelect -win $_nTrace1 -path "reg_file_async"
+srcTBBTreeSelect -win $_nTrace1 -path "reg_file_async"
+srcTBBTreeSelect -win $_nTrace1 -path "reg_file_async"
+srcTBTreeAction -win $_nTrace1 -path "reg_file_async"
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+srcTBBTreeSelect -win $_nTrace1 -path "SMU_RV32I_System"
+srcTBBTreeSelect -win $_nTrace1 -path "SMU_RV32I_System"
+srcTBTreeAction -win $_nTrace1 -path "SMU_RV32I_System"
+schCreateWindow -delim "." -win $_nSchema1 -scope "cpu_tb.CPU"
+verdiSetActWin -win $_nSchema_4
+wvCreateWindow
+verdiSetActWin -win $_nWave5
+schSelect -win $_nSchema4 -inst "icpu"
+schPushViewIn -win $_nSchema4
+verdiSetActWin -win $_nSchema_4
+verdiWindowResize -win $_Verdi_1 -119 "26" "1440" "752"
+verdiQtPrefEnv -show
+verdiQtPrefEnv -setCurPg "Schematics"
+schResetDisplayAttr -black
+schResetDisplayAttr -default
+schResetDisplayAttr -black
+schResetDisplayAttr -white
+schResetDisplayAttr -black
+schResetDisplayAttr -default
+verdiQtPrefEnv -setCurPg "Schematics.Display Options"
+verdiQtPrefEnv -setCurPg "Schematics"
+schSetPreference -pinName on
+srcSetPreference -cfiletype \
+           {Source files (*.v; *.vlg; *.vl; *.vr; *.vrh; *.sv; *.svh; *.ova; *.vhd; *.vhdl; *.psl; *.vu; *.e;*.c; *.cpp; *.cxx; *.cc; *.h; *.hpp; *.hxx; *.hh; *.tcl; *.tk; *.do; *.upf; *.cpf);;HDL files (*.v; *.vlg; *.vl; *.vr; *.vrh; *.sv; *.svh; *.ova; *.vhd; *.vhdl; *.psl; *.vu; *.e);;C/C++ files (*.c; *.cpp; *.cxx; *.cc; *.h; *.hpp; *.hxx; *.hh);;Tcl files (*.tcl; *.tk; *.do);;Power files (*.upf;*.cpf) }
+srcSetPreference -profileTime off
+simSetInteractiveFsdbFile inter.fsdb
+simSetNoAppendOption on
+simSetSvtbMode on
+verdiQtPrefEnv -apply
+schResetDisplayAttr -white
+schResetDisplayAttr -default
+verdiQtPrefEnv -setCurPg "Schematics.RTL"
+verdiQtPrefEnv -setCurPg "Schematics.Symbol Library"
+verdiQtPrefEnv -setCurPg "Schematics.Miscellaneous"
+verdiQtPrefEnv -setCurPg "Schematics.Display Options"
+verdiQtPrefEnv -setCurPg "Schematics.Select"
+verdiQtPrefEnv -setCurPg "Schematics.SDF"
+verdiQtPrefEnv -setCurPg "Schematics.Trace"
+verdiQtPrefEnv -setCurPg "Schematics.Clock"
+verdiQtPrefEnv -setCurPg "Schematics.EditSchematic"
+verdiQtPrefEnv -setCurPg "Schematics"
+schSetPreference -portName on -selectionToolbar on -instName on -localNetName on \
+           -completeName on -parameterList on -highContrastMode on
+verdiQtPrefEnv -apply
+verdiQtPrefEnv -ok
+schPopViewUp -win $_nSchema4
+schDeselectAll -win $_nSchema4
+schZoom {16413} {2460} {38757} {17851} -win $_nSchema4
+schZoom {19609} {2880} {43638} {16801} -win $_nSchema4
+schSelect -win $_nSchema4 -inst "imem"
+schPushViewIn -win $_nSchema4
+schPopViewUp -win $_nSchema4
+schSelect -win $_nSchema4 -inst "icpu"
+schPushViewIn -win $_nSchema4
+schSelect -win $_nSchema4 -inst "i_datapath"
+schPushViewIn -win $_nSchema4
+schZoom {24346} {-5541} {79416} {29438} -win $_nSchema4
+schZoom {28539} {5425} {56549} {26034} -win $_nSchema4
+schSelect -win $_nSchema4 -signal "ALUControlE\[4:0\]"
+verdiSetActWin -win $_nWave5
+wvSetPosition -win $_nWave5 {("G1" 0)}
+wvOpenFile -win $_nWave5 \
+           {/home1/socuser10/2025Soc/week1x_final_project/hardware/02.RV32I_Integrated_Test/sim/func_sim/wave.fsdb}
+schSelect -win $_nSchema4 -signal "ALUControlE\[4:0\]"
+verdiSetActWin -win $_nSchema_4
+schAddSelectedToWave -win $_nSchema4 -clipboard
+wvDrop -win $_nWave5
+verdiWindowResize -win $_Verdi_1 "155" "59" "1440" "933"
+wvSetCursor -win $_nWave5 50.738551 -snap {("G2" 0)}
+verdiSetActWin -win $_nWave5
+wvZoomAll -win $_nWave5
+wvZoomAll -win $_nWave5
+wvZoomAll -win $_nWave5
+wvZoomAll -win $_nWave5
+wvZoomAll -win $_nWave5
+wvZoomAll -win $_nWave5
+wvSetCursor -win $_nWave5 346.173659 -snap {("G2" 0)}
+wvZoomAll -win $_nWave5
+schSelect -win $_nSchema4 -signal "ALUResultE\[31:0\]"
+verdiSetActWin -win $_nSchema_4
+schAddSelectedToWave -win $_nSchema4 -clipboard
+wvDrop -win $_nWave5
+wvSetCursor -win $_nWave5 603.824740 -snap {("G2" 0)}
+verdiSetActWin -win $_nWave5
+wvZoomAll -win $_nWave5
+wvZoomAll -win $_nWave5
+debExit

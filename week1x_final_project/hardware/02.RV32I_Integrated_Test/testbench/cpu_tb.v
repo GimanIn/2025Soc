@@ -593,7 +593,7 @@ if (1) begin
     end
 end
 
-if (0) begin
+/*if (0) begin
    // Test CSR Insts -----------------------------------------------------
    // - CSRRW, CSRRWI
    reset();
@@ -623,7 +623,7 @@ if (0) begin
    done = 1;
 
    $display("[%d] Test CSRRWI passed!", current_test_id);
-end
+end*/
 
 
 if (1) begin
