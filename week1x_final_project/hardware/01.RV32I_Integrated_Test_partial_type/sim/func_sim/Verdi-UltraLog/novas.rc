@@ -236,8 +236,8 @@ TclAutoSource =
 cmd_enter_form = FALSE
 SyncBrowserDir = TRUE
 ViewMouse13Swap = FALSE
-version = Verdi_S-2021.09-SP2-9
 SignalCaseInSensitive = FALSE
+version = Verdi_S-2021.09-SP2-9
 [GlobalProp]
 ErrWindow_Font = Helvetica_M_R_12
 [Globals]
@@ -391,20 +391,21 @@ saveWaveformStat = TRUE
 savePropStat = FALSE
 savePropDtl = TRUE
 [QtDialog]
-qPrefDlg = 592,352,716,424
 restoreSigDlg = 683,352,551,438
 saveSigDlg = 1583,648,551,386
-unknownSave = 728,448,461,245
 ChangeColorDialog = 802,417,313,307
 SCHFindForm_base = 717,357,483,428
 Verdi_OpenFile = 665,402,590,340
 dockContainerWindowTitleDialog = 1610,1062,620,111
-qWaveSignalDialog = 1570,973,800,479
-QwInfoMsgDlg = 575,388,750,250
-openFileDlg = 658,329,602,483
-QwWarnMsgDlg = 659,390,600,250
 importDesignForm = 601,284,715,574
-QwUserAskDlg = 798,507,324,130
+QwUserAskDlg = 797,434,324,130
+qPrefDlg = 0,273,716,424
+QwInfoMsgDlg = 575,388,750,250
+QwWarnMsgDlg = 329,213,600,250
+unknownSave = 1106,485,461,245
+unknownSave_SaveSignal(s)NotFound = 1051,483,590,340
+qWaveSignalDialog = 2125,912,800,479
+openFileDlg = 2117,705,602,483
 [Relationship]
 hideRecursiceNode = FALSE
 [Safety]
@@ -615,7 +616,7 @@ pdmlMacro = ID_BLACK
 font = COURIER12
 annotFont = Helvetica_M_R_10
 [Text.1]
-viewport = -1 26 1920 1016 45
+viewport = -171 91 791 752 45
 [TextPrinter]
 Orientation = Landscape
 Indicator = FALSE
@@ -699,40 +700,40 @@ Button1 = "Dump All Signals" "$fsdbDumpvars;\n"
 [VIA]
 viaLogViewerDefaultRuleOneSearchForm = "share/VIA/Apps/PredefinedRules/Misc/Onesearch_rule.rc"
 [VIA.oneSearch.preference]
+isOneSearchVisible = TRUE
 DefaultDisplayTimeUnit = "1.000000ns"
 DefaultLogTimeUnit = "1.000000ns"
-isOneSearchVisible = TRUE
 [VIA.oneSearch.preference.vgifColumnSettingRC]
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column0]
-name = Severity
-width = 60
-visualIndex = 1
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
-name = Type
-width = 60
-visualIndex = 3
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
 name = Message
 width = 2000
 visualIndex = 4
 isHidden = FALSE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
 name = Time
 width = 60
 visualIndex = 0
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
 name = Code
 width = 60
 visualIndex = 2
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+name = Type
+width = 60
+visualIndex = 3
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
+name = Severity
+width = 60
+visualIndex = 1
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [Vi]
@@ -817,7 +818,6 @@ scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
 maskTPropagation = TRUE
-getSignalForm = 1570 936 800 479 164 381 390 89
 viewPort = 0 25 1920 290 193 144
 legendBackground = -c ID_BLACK
 valueBackground = -c ID_BLACK
@@ -1020,6 +1020,7 @@ maskFsaRegRule = TRUE
 maskFsaCoreRule = TRUE
 maskFsaSfsmRule = TRUE
 maskFsaEcrRule = TRUE
+getSignalForm = 2125 875 800 479 245 381 505 183
 [cov_hier_name_column]
 justify = TRUE
 [coverageColors]
@@ -1235,8 +1236,9 @@ GroundMapFile =
 CopyScopeNameDelimiter = 
 RegNamingRule = 
 netFontColor
+checkFloatingNet = False
 schBackgroundColor = ID_BLACK lineSolid 1
-schBackgroundColor_qt = #000000 qt_solidLine 1
+schBackgroundColor_qt = #000000 qt_solidLine 3
 schBodyColor = ID_ORANGE6 lineSolid 1
 schBodyColor_qt = #ffb973 qt_solidLine 1
 schTriColor = ID_ORANGE6 lineSolid 1
@@ -1485,7 +1487,6 @@ modulePortName = False
 stopOnModuleBoundary = False
 stopOnFSM = True
 stopOnMOSCell = FALSE
-checkFloatingNet = False
 TraceWithPolarity = False
 shortName = True
 AutoMerge = False
@@ -1607,7 +1608,7 @@ SubScopeFontAutoAdjust = TRUE
 clockTreeBrowser-MarkerColor = ID_YELLOW5
 clockTreeBrowser-SelectedColor = ID_BLUE5
 clockTreeBrowser-ViolationColor = ID_RED5
-viewport = 0 25 1583 719
+viewport = 0 25 648 488
 [schematics_print]
 Signature = FALSE
 DesignName = PCU

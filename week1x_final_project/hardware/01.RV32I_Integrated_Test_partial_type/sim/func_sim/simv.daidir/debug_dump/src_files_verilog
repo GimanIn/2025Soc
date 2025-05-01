@@ -20,6 +20,7 @@
 /home1/socuser10/2025Soc/week1x_final_project/hardware/source/myCPU/pipeline_async/rev00/building_blocks/mux3.sv
 /home1/socuser10/2025Soc/week1x_final_project/hardware/source/myCPU/pipeline_async/rev00/controller.sv
 /home1/socuser10/2025Soc/week1x_final_project/hardware/source/myCPU/pipeline_async/rev00/datapath.sv
+/home1/socuser10/2025Soc/week1x_final_project/hardware/source/myCPU/pipeline_async/rev00/hazard_unit.sv
 /home1/socuser10/2025Soc/week1x_final_project/hardware/source/myCPU/pipeline_async/rev00/maindec.sv
 /home1/socuser10/2025Soc/week1x_final_project/hardware/source/myCPU/pipeline_async/rev00/reg_file_async.v
 /home1/socuser10/2025Soc/week1x_final_project/hardware/source/myCPU/pipeline_async/rev00/riscvpipeline.sv

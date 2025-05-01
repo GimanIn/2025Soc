@@ -5,6 +5,12 @@
         "module",
         1
     ],
+    "ASYNC_RAM_DP_WBE": [
+        "ASYNC_RAM_DP_WBE",
+        "TV9z4",
+        "module",
+        13
+    ],
     "cla_8bit": [
         "cla_8bit",
         "c8pr1",
