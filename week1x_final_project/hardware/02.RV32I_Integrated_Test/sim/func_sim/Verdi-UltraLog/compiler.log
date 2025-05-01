@@ -18,6 +18,7 @@ Command arguments:
         ../../../source/myCPU/pipeline_async/rev00/EX_MEM.sv
         ../../../source/myCPU/pipeline_async/rev00/IF_ID.sv
         ../../../source/myCPU/pipeline_async/rev00/MEM_WB.sv
+        ../../../source/myCPU/pipeline_async/rev00/hazard_unit.sv
         ../../../source/myCPU/pipeline_async/rev00/building_blocks/BE_logic.sv
         ../../../source/myCPU/pipeline_async/rev00/building_blocks/adder.sv
         ../../../source/myCPU/pipeline_async/rev00/building_blocks/mux3.sv
@@ -33,5 +34,11 @@ cpu_tb
 
 
 *Warning* Failed to find the specified instance parameter RESET_VALUE in the master flopenr
-"../../../source/myCPU/pipeline_async/rev00/datapath.sv", 230: 
-Total	0 error(s),   1 warning(s)
+"../../../source/myCPU/pipeline_async/rev00/datapath.sv", 606: 
+
+*Error* failed to find identifier CPU.icpu.i_datapath.tohost_csr
+"../../testbench/cpu_tb.v", 613: 
+
+*Error* failed to find identifier CPU.icpu.i_datapath.tohost_csr
+"../../testbench/cpu_tb.v", 622: 
+Total	2 error(s),   1 warning(s)

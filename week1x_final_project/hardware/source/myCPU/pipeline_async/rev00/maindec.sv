@@ -143,7 +143,7 @@ endmodule*/
 module maindec(
     input [6:0] opcode,          // 명령어의 opcode 필드
     input [2:0] funct3,          // 명령어의 funct3 필드
-    input Btaken,                // 브랜치가 성공했는지 여부
+    //input Btaken,                // 브랜치가 성공했는지 여부
     output reg Branch,           // 브랜치 명령어 신호
     output reg Jal,              // JAL 명령어 신호
     output reg Jalr,             // JALR 명령어 신호
@@ -177,8 +177,9 @@ module maindec(
         endcase
 
         // Btaken 적용
-        if (Btaken)
+       /* if (Btaken)
             Branch = 1'b1;
+    end*/
     end
 endmodule
 

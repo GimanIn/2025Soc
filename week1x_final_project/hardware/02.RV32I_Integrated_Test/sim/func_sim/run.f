@@ -16,6 +16,7 @@
 ../../../source/myCPU/pipeline_async/rev00/EX_MEM.sv
 ../../../source/myCPU/pipeline_async/rev00/IF_ID.sv
 ../../../source/myCPU/pipeline_async/rev00/MEM_WB.sv
+../../../source/myCPU/pipeline_async/rev00/hazard_unit.sv
 
 ../../../source/myCPU/pipeline_async/rev00/building_blocks/BE_logic.sv
 ../../../source/myCPU/pipeline_async/rev00/building_blocks/adder.sv

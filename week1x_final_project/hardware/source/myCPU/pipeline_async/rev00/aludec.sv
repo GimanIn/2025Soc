@@ -1,4 +1,4 @@
-module aludec(
+/*module aludec(
     input [6:0] opcode,
     input [2:0] funct3,
     input [1:0] ALUop,
@@ -32,7 +32,7 @@ module aludec(
                     3'b001: 
                         ALUControl = 5'b00110;  // sll
                     3'b101:  // srl, sra 구분
-                        if (funct7 == 1'b0)
+                        if (funct7 == 7'b0000000)
                             ALUControl = 5'b0111;  // srl
                         else
                             ALUControl = 5'b1000;  // sra
@@ -64,10 +64,9 @@ module aludec(
             default: ALUControl = 5'b00000;  // Invalid ALUop
         endcase
     end
-endmodule
+endmodule*/
 
-
-/*module aludec(
+module aludec(
     input [6:0] opcode,
     input [2:0] funct3,
     input [1:0] ALUop,
@@ -125,5 +124,66 @@ endmodule
             default: ALUControl = 5'bxxxxx;  // Invalid ALUop
         endcase
     end
+endmodule
+
+/*module aludec(
+    opcode,
+    funct3,
+    funct7,
+    ALUop,
+    ALUControl
+);
+    // input
+    input [6:0] opcode;
+    input [2:0] funct3;
+    input [1:0] ALUop;
+    input funct7;
+    // output
+    output reg [4:0] ALUControl;
+
+    always@(*)begin // ALU decoder
+        if(ALUop == 2'b00)
+            ALUControl = 5'b0_0000; // lw, sw
+
+        else if(ALUop == 2'b01)
+            ALUControl = 5'b1_0000; // beq, bne
+            
+        else if(ALUop == 2'b10) begin
+            if (funct3 == 3'b000 && ({opcode[5], funct7} == 2'b00 || {opcode[5], funct7} == 2'b01 || {opcode[5], funct7} == 2'b10 || opcode == 7'b1100111))  // add
+                ALUControl = 5'b0_0000;
+
+            else if (funct3 == 3'b000 && {opcode[5], funct7} == 2'b11) // sub
+                ALUControl = 5'b1_0000;
+
+            else if (funct3 == 3'b001) // sll
+                ALUControl = 5'b0_0100;
+
+            else if (funct3 == 3'b010)	// slt
+                ALUControl = 5'b1_0111;
+
+            else if (funct3 == 3'b011)	// sltu
+                ALUControl = 5'b1_1000;
+
+            else if (funct3 == 3'b101 && ({opcode[5], funct7} == 2'b10 | {opcode[5], funct7} == 2'b00))	// srl or srli
+                ALUControl = 5'b0_0101;
+
+            else if (funct3 == 3'b101 && ({opcode[5], funct7} == 2'b11 | {opcode[5], funct7} == 2'b01))	// sra or srai
+                ALUControl = 5'b0_0110;
+
+            else if (funct3 == 3'b110) // or
+                ALUControl = 5'b0_0010;
+
+            else if (funct3 == 3'b100) // xor
+                ALUControl = 5'b0_0011;
+
+            else if (funct3 == 3'b111) // and
+                ALUControl = 5'b0_0001;
+            else 
+                ALUControl = 5'h0;
+        end
+    end
+        
+
 endmodule*/
+
 

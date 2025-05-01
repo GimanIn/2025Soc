@@ -20,6 +20,7 @@ module datapath(
     V_flag,       // for controller
     Btaken,
     ByteEnable,
+    Jump,
     Csr
 );
 
@@ -29,7 +30,7 @@ module datapath(
     input clk, n_rst, Branch, RegWrite;
     input [31:0] Instr, ReadData;
     input [1:0] PCSrc, ResultSrc, ALUSrcA;
-    input ALUSrcB;
+    input ALUSrcB,Jump;
     input [2:0] ImmSrc;
     input [4:0] ALUControl;
     input Csr;
@@ -46,7 +47,7 @@ module datapath(
     wire [31:0] SrcB, Result;
     wire [31:0] BE_RD;
     wire sltu_result;
-
+    wire [2:0] ImmSrcD = ImmSrc;
     wire [6:0] opcode = Instr[6:0];
     wire [2:0] funct3 = Instr[14:12];
     reg [31:0] tohost_csr;
@@ -70,17 +71,28 @@ module datapath(
         .in0(PC_plus4),
         .in1(PC_target),
         .in2(ALUResult),
-        .sel(PCSrc),
+        .sel(PCSrcE),
         .out(PC_next)
     );
 
     // PC Register
-    flopr #(
+    /*flopr #(
         .RESET_VALUE(RESET_PC)
     ) u_pc_register(
         .clk(clk),
         .n_rst(n_rst),
         .d(PC_next),
+        .q(PC)
+    );*/
+
+    // PC Register
+    flopenr #(
+        .RESET_VALUE(RESET_PC)
+    ) u_pc_register(
+        .clk(clk),
+        .n_rst(n_rst),
+        .d(PC_next),
+        .en(StallF),
         .q(PC)
     );
 
@@ -89,16 +101,103 @@ module datapath(
         .a(PC), 
         .b(32'h4), 
         .ci(1'b0), 
-        .sum(PC_plus4),
+        .sum(PC_plus4F),
         .N(), .Z(), .C(), .V()
     );
 
+    IF_ID # (
+        .RESET_VALUE (RESET_PC)
+    ) u_IF_ID (
+      // input
+      .clk(clk),
+      .n_rst(n_rst),
+      .en(StallD),
+      .FlushD(FlushD),
+      .RD(Instr),
+      .PCF(PC),
+      .PC_plus4F(PC_plus4F),
+
+      // output
+      .InstrD(InstrD),
+      .PCD(PCD),
+      .PC_plus4D(PC_plus4D)
+    );
+
+    ID_EX # (
+        .RESET_VALUE (RESET_PC)
+    ) u_ID_EX (
+    // input
+      .clk(clk),
+      .n_rst(n_rst),
+      .CLR(lwStall),
+      .FlushE(FlushE),
+    //   .CLR(),
+      // control signal
+      .BranchD(Branch),
+      .ResultSrcD(ResultSrc),
+      .MemWriteD(MemWrite),
+      .ALUControlD(ALUControl),
+      .ALUSrc_AD(ALUSrc_A),
+      .ALUSrc_BD(ALUSrc_B),
+      .RegWriteD(RegWrite),
+      .JumpD(Jump),
+      .CsrD(Csr),
+      
+      // datapath signal
+      .InstrD(InstrD),
+      .RD1(RD1H),
+      .RD2(RD2H),
+      .PCD(PCD),
+      .RdD(RdD),
+      .Rs1D(InstrD[19:15]),
+      .Rs2D(InstrD[24:20]),
+      .ImmExtD(ImmExt),
+      .PC_plus4D(PC_plus4D),
+
+    // output
+      // control signal
+      .BranchE(BranchE),
+      .ResultSrcE(ResultSrcE),
+      .MemWriteE(MemWriteE),
+      .ALUControlE(ALUControlE),
+      .ALUSrc_AE(ALUSrc_AE),
+      .ALUSrc_BE(ALUSrc_BE),
+      .RegWriteE(RegWriteE),
+      .JumpE(JumpE),
+      .CsrE(CsrE),
+      // datapath signal
+      .InstrE(InstrE),
+      .RD1E(RD1E),
+      .RD2E(RD2E),
+      .PCE(PCE),
+      .Rs1E(Rs1E),
+      .Rs2E(Rs2E),
+      .RdE(RdE),
+      .ImmExtE(ImmExtE),
+      .PC_plus4E(PC_plus4E)
+    );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Immediate Extension Unit
     extend u_Extend(
-        .ImmSrc(ImmSrc),
+        .ImmSrc(ImmSrcD),
         .in(Instr[31:7]),
         .opcode(opcode),
-        .out(ImmExt)
+        .out(ImmExtD)
     );
 
     // Adder for Branch Target Address

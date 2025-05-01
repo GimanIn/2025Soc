@@ -5,10 +5,10 @@ module riscvpipeline(
 	Instr,
 	//MemWrite,
 	ALUResult,
-	//WriteData,
+	WriteData_d,
 	ReadData,
 	ByteEnable,
-	BE_WD,
+	//BE_WD,
 	MemWriteM
 );
 //func3랑 aluresult만 밀기
@@ -19,7 +19,7 @@ module riscvpipeline(
 	input [31:0] Instr, ReadData;
 	//output
 	output MemWriteM;
-	output [31:0] PC, ALUResult, BE_WD;//WriteData; BE_WD;
+	output [31:0] PC, ALUResult, WriteData_d;//WriteData; BE_WD;
 	output [3:0]  ByteEnable;
 
 	wire [31:0] InstrD;
@@ -49,7 +49,7 @@ module riscvpipeline(
 		.Jump()
 	);*/
 	controller u_controller(
-        .opcode(InstrD[6:0]),       // Opcode 입력
+        .opcode(InstrD[6:0]),       // Opcode 입력,InstrD[6:0]
         .funct3(InstrD[14:12]),     // Funct3 입력
         .funct7(InstrD[31:25]),        // Funct7 입력
         .Btaken(Btaken),           // 브랜치 성공 여부 입력
@@ -126,10 +126,11 @@ module riscvpipeline(
         .clk(clk),                 // 클럭 입력
         .n_rst(n_rst),             // 리셋 입력
         .BranchD(Branch),          // 브랜치 제어 신호
+		//.opcode(InstrD[6:0]),
         .Btaken(Btaken),           // 브랜치 성공 여부
         .Instr(Instr),             // 명령어 입력
         .ReadDataM(ReadData),      // 메모리 읽기 데이터 입력
-        .PCSrc(PCSrc),             // PC 소스 제어 신호
+        //.PCSrc(PCSrc),             // PC 소스 제어 신호
         .ResultSrcD(ResultSrc),    // 결과 소스 제어 신호
         .ALUControlD(ALUControl),  // ALU 제어 신호
 		.JalD(Jal),
@@ -140,7 +141,8 @@ module riscvpipeline(
         .RegWriteD(RegWrite),      // 레지스터 쓰기 제어 신호
         .PCF(PC),                  // Program Counter 출력
         .ALUResultM(ALUResult),    // ALU 결과 출력
-        .BE_WD(BE_WD),             // 메모리 쓰기 데이터 출력
+        //.BE_WD(BE_WD),             // 메모리 쓰기 데이터 출력
+		.WriteData_d(WriteData_d),
         .Z_flagE(Z_flag),          // Zero 플래그 출력
         //.C_flagE(C_flag),          // Carry 플래그 출력
         //.N_flagE(N_flag),          // Negative 플래그 출력
