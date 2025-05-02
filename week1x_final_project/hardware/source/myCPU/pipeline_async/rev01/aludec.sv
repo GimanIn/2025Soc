@@ -2,7 +2,7 @@ module aludec(
     input [6:0] opcode,
     input [2:0] funct3,
     input [1:0] ALUop,
-    input funct7,
+    input [6:0] funct7,
     output reg [4:0] ALUControl  // Adjusted to 5 bits to match ALU module
 );
 
@@ -33,7 +33,7 @@ module aludec(
                         if (funct7 == 1'b0)
                             ALUControl = 5'b0111;  // srl
                         else
-                            ALUControl = 5'b1000;  // sra
+                            ALUControl = 5'b00101;  // sra
                     default: 
                         ALUControl = 5'h0;  // 알 수 없는 명령어
                 endcase

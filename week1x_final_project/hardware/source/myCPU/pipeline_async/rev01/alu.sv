@@ -23,15 +23,17 @@ module alu(
     wire [31:0] addi_result, slti_result, sltiu_result;
     wire [31:0] xori_result, srli_result, ori_result, andi_result;
     wire [31:0] jalr_result;
+    wire is_sub;
 
     // Handle addition/subtraction inputs
-    assign add_sub_b = (ALUControl == 5'b00001 || ALUControl == 5'b00101) ? ~b_in + 32'h1 : b_in;
+    assign is_sub = (is_sub) ? ~b_in : b_in;
+    assign add_sub_b = (ALUControl == 5'b00001 || ALUControl == 5'b00101);
 
     // Adder instance
     adder u_add_32bit_add(
         .a(a_in),
         .b(add_sub_b),
-        .ci(1'b0),
+        .ci(is_sub),
         .sum(adder_result),
         .N(N),
         .Z(Z),

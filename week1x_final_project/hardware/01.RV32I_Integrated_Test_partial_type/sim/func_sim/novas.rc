@@ -236,8 +236,8 @@ TclAutoSource =
 cmd_enter_form = FALSE
 SyncBrowserDir = TRUE
 ViewMouse13Swap = FALSE
-SignalCaseInSensitive = FALSE
 version = Verdi_S-2021.09-SP2-9
+SignalCaseInSensitive = FALSE
 [GlobalProp]
 ErrWindow_Font = Helvetica_M_R_12
 [Globals]
@@ -398,14 +398,14 @@ SCHFindForm_base = 717,357,483,428
 Verdi_OpenFile = 665,402,590,340
 dockContainerWindowTitleDialog = 1610,1062,620,111
 importDesignForm = 601,284,715,574
-QwUserAskDlg = 797,434,324,130
 qPrefDlg = 0,273,716,424
 QwInfoMsgDlg = 575,388,750,250
-QwWarnMsgDlg = 329,213,600,250
 unknownSave = 1106,485,461,245
 unknownSave_SaveSignal(s)NotFound = 1051,483,590,340
-qWaveSignalDialog = 2125,912,800,479
-openFileDlg = 2117,705,602,483
+openFileDlg = 1381,807,602,483
+QwWarnMsgDlg = 329,213,600,250
+QwUserAskDlg = 798,505,324,134
+qWaveSignalDialog = 1282,809,800,479
 [Relationship]
 hideRecursiceNode = FALSE
 [Safety]
@@ -616,7 +616,7 @@ pdmlMacro = ID_BLACK
 font = COURIER12
 annotFont = Helvetica_M_R_10
 [Text.1]
-viewport = -171 91 791 752 45
+viewport = -10 19 1920 1016 45
 [TextPrinter]
 Orientation = Landscape
 Indicator = FALSE
@@ -700,35 +700,35 @@ Button1 = "Dump All Signals" "$fsdbDumpvars;\n"
 [VIA]
 viaLogViewerDefaultRuleOneSearchForm = "share/VIA/Apps/PredefinedRules/Misc/Onesearch_rule.rc"
 [VIA.oneSearch.preference]
-isOneSearchVisible = TRUE
 DefaultDisplayTimeUnit = "1.000000ns"
 DefaultLogTimeUnit = "1.000000ns"
+isOneSearchVisible = TRUE
 [VIA.oneSearch.preference.vgifColumnSettingRC]
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column0]
-name = Message
-width = 2000
-visualIndex = 4
-isHidden = FALSE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
 name = Time
 width = 60
 visualIndex = 0
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
 name = Code
 width = 60
 visualIndex = 2
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
 name = Type
 width = 60
 visualIndex = 3
 isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+name = Message
+width = 2000
+visualIndex = 4
+isHidden = FALSE
 isUserChangeColumnVisible = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
 name = Severity
@@ -818,7 +818,8 @@ scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
 maskTPropagation = TRUE
-viewPort = 0 25 1920 290 193 144
+getSignalForm = 1282 772 800 479 245 381 505 183
+viewPort = 0 25 1920 307 193 82
 legendBackground = -c ID_BLACK
 valueBackground = -c ID_BLACK
 curveBackground = -c ID_BLACK
@@ -997,18 +998,18 @@ group_name_font = -f COURIER12 -c ID_GREEN5
 ruler_value_font = -f COURIER12 -c ID_CYAN5
 analog_ruler_value_font = -f COURIER12 -c ID_CYAN5
 comment_string_font = -f COURIER12 -c ID_RED5
-getsignal_form_font = -f COURIER12
+getsignal_form_font = -f COURIER12 
 SigsCheckNum = on 1000
 filter_synthesized_net = off n
 filterOutNet = on
 exclude_signal_with_prefix = off n
 synthesizeNetOnly = on
-filter_synthesized_instance = off
+filter_synthesized_instance = off 
 filterOutInstance = on
 showGroupTree = TRUE
 hierGroupDelim = /
 MsgSeverityColor = {y \"Severity\"==\"1\" ID_RED5} {y \"Severity\"==\"2\" ID_RED6} {y \"Severity\"==\"3\" ID_RED7} {y \"Severity\"==\"4\" ID_RED8} {y \"Severity\"==\"5\" ID_ORANGE5} {y \"Severity\"==\"6\" ID_ORANGE6} {y \"Severity\"==\"7\" ID_ORANGE7} {y \"Severity\"==\"8\" \
-ID_GREEN7} {y \"Severity\"==\"9\" ID_GREEN6} {y \"Severity\"==\"10\" ID_GREEN5}
+ID_GREEN7} {y \"Severity\"==\"9\" ID_GREEN6} {y \"Severity\"==\"10\" ID_GREEN5} 
 waveDblClkActiveTrace = on
 SEQShowComparisonIcon = TRUE
 SEQAddDriverLoadInSameGroup = TRUE
@@ -1020,7 +1021,6 @@ maskFsaRegRule = TRUE
 maskFsaCoreRule = TRUE
 maskFsaSfsmRule = TRUE
 maskFsaEcrRule = TRUE
-getSignalForm = 2125 875 800 479 245 381 505 183
 [cov_hier_name_column]
 justify = TRUE
 [coverageColors]
@@ -1093,7 +1093,7 @@ OutputPinStatus = 2
 RevisedComponentColor = ID_BLUE5
 SpareCellColor = ID_RED5
 UserName = socuser10
-CommentFormat = Novas ECO updated by ${UserName} ${Date} ${Time}
+CommentFormat = Novas ECO updated by ${UserName} ${Date} ${Time} 
 PrefixN = eco_n
 PrefixP = eco_p
 PrefixI = eco_i
@@ -1608,7 +1608,7 @@ SubScopeFontAutoAdjust = TRUE
 clockTreeBrowser-MarkerColor = ID_YELLOW5
 clockTreeBrowser-SelectedColor = ID_BLUE5
 clockTreeBrowser-ViolationColor = ID_RED5
-viewport = 0 25 648 488
+viewport = 0 25 1585 521
 [schematics_print]
 Signature = FALSE
 DesignName = PCU
@@ -1744,7 +1744,7 @@ AddImportArgument = FALSE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -s
 [wave.0]
-viewPort = 0 25 1920 290 193 144
+viewPort = 0 25 1920 307 193 82
 [wave.1]
 viewPort = 127 219 960 332 100 65
 [wave.2]

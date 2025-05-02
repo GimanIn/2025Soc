@@ -511,3 +511,53 @@ wvDrop -win $_nWave4
 verdiSetActWin -dock widgetDock_<Decl._Tree>
 wvSetCursor -win $_nWave4 1975.048255 -snap {("G2" 0)}
 verdiSetActWin -win $_nWave4
+wvSetCursor -win $_nWave4 3990.181555 -snap {("G2" 0)}
+schDeselectAll -win $_nSchema5
+verdiSetActWin -win $_nSchema_5
+verdiSetActWin -win $_nWave4
+wvZoomAll -win $_nWave4
+wvZoomIn -win $_nWave4
+wvZoomIn -win $_nWave4
+wvZoomIn -win $_nWave4
+wvZoomIn -win $_nWave4
+wvZoomIn -win $_nWave4
+wvZoomOut -win $_nWave4
+wvZoomOut -win $_nWave4
+schZoomOut -win $_nSchema5 -pos 53806 22136
+schZoomOut -win $_nSchema5 -pos 53806 22136
+verdiSetActWin -win $_nSchema_5
+schZoomIn -win $_nSchema5 -pos 63389 16956
+schZoomIn -win $_nSchema5 -pos 63389 16956
+schZoomIn -win $_nSchema5 -pos 108121 19026
+schZoomIn -win $_nSchema5 -pos 108121 19026
+schSelect -win $_nSchema5 -inst "u_ID_EX"
+schPushViewIn -win $_nSchema5
+schZoomIn -win $_nSchema5 -pos 10431 14747
+schZoomIn -win $_nSchema5 -pos 10431 14746
+schZoomIn -win $_nSchema5 -pos 10431 14746
+schZoomOut -win $_nSchema5 -pos 10430 14746
+schZoomOut -win $_nSchema5 -pos 10429 14745
+schZoomIn -win $_nSchema5 -pos 7072 11276
+schSelect -win $_nSchema5 -port "JalD"
+schAddSelectedToWave -win $_nSchema5 -clipboard
+wvDrop -win $_nWave4
+verdiSetActWin -win $_nWave4
+schSelect -win $_nSchema5 -port "JalrD"
+verdiSetActWin -win $_nSchema_5
+schAddSelectedToWave -win $_nSchema5 -clipboard
+wvDrop -win $_nWave4
+wvZoomOut -win $_nWave4
+wvZoomOut -win $_nWave4
+wvZoomOut -win $_nWave4
+schSelect -win $_nSchema5 -port "InstrD\[31:0\]"
+schAddSelectedToWave -win $_nSchema5 -clipboard
+wvDrop -win $_nWave4
+schSelect -win $_nSchema5 -toggle -port "InstrE\[31:0\]"
+schAddSelectedToWave -win $_nSchema5 -clipboard
+wvDrop -win $_nWave4
+wvZoomIn -win $_nWave4
+wvZoomIn -win $_nWave4
+wvZoomIn -win $_nWave4
+verdiSetActWin -win $_nWave4
+verdiSetActWin -win $_nSchema_5
+debExit
