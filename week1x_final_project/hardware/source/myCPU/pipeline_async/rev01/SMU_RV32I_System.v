@@ -21,8 +21,8 @@ module SMU_RV32I_System (
   parameter AWIDTH = 12;
 
   wire [31:0] PC, Instr;
-  wire [31:0] WriteData, DataAdr;
-  wire MemWrite;
+  wire [31:0] WriteData_d, DataAdr;
+  wire MemWriteM;
   wire [31:0] ReadData;
 
   wire reset;
@@ -58,6 +58,7 @@ module SMU_RV32I_System (
 
   wire n_rst = reset_ff;
 
+  
   riscvpipeline #(
       .RESET_PC(RESET_PC)
     ) icpu (
@@ -65,12 +66,12 @@ module SMU_RV32I_System (
     .n_rst(n_rst),
     .PC(PC),
     .Instr(Instr),
-    .MemWrite(MemWrite),
+    .MemWriteM(MemWriteM),
     .ALUResult(DataAdr),
-    //.WriteData(WriteData),
+    .WriteData_d(WriteData_d),
     .ReadData(ReadData),
-    .ByteEnable(ByteEnable),
-    .BE_WD(BE_WD)
+    .ByteEnable(ByteEnable)
+    //.BE_WD(BE_WD)
   );
 
   // imem imem(
@@ -85,6 +86,9 @@ module SMU_RV32I_System (
    	.d0(WriteData),
    	.q0(ReadData)
    );*/
+   reg MemWrite_d;
+
+
 
     ASYNC_RAM_DP_WBE #(
         .DWIDTH (DWIDTH),
@@ -98,10 +102,10 @@ module SMU_RV32I_System (
       .wbe1     (ByteEnable),
       //.wbe1     (4'hF),
       .d0       (32'd0),
-      //.d1       (WriteData),
-      .d1   (BE_WD),
+      .d1       (WriteData_d),
+      //.d1   (BE_WD),
       .wen0     (1'b0),
-      .wen1     (MemWrite),//~cs_mem_n &
+      .wen1      (MemWriteM),//~cs_mem_n &
       .q0       (Instr),
       .q1       (ReadData)
     );

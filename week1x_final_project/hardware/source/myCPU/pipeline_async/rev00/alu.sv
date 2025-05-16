@@ -6,12 +6,14 @@ module alu(
     aZ,
     aC,
     aN,
-    aV
+    aV,
+    sltu_result
 );
     input [31:0] a_in, b_in;
     input [4:0] ALUControl;
     output reg [31:0] result; 
     output reg aZ, aN, aC, aV;
+    output sltu_result;
 
     wire N, Z, C, V;
     wire [31:0] add_sub_b;
@@ -228,6 +230,7 @@ end
             5'b01100 : result = addi_result;        // ADDI
             5'b01101 : result = slti_result;        // SLTI
             5'b01110 : result = sltiu_result;       // SLTIU
+            5'b10100 : result = {31'b0,sltu_result};  // SLTU
             5'b01111 : result = xori_result;        // XORI
             5'b10000 : result = srli_result;        // SRLI
             5'b10001 : result = ori_result;         // ORI

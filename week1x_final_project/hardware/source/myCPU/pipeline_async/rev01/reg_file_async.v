@@ -24,7 +24,7 @@ module reg_file_async (
     genvar i;
     generate
         for(i = 1; i < 32 ; i = i+1) begin : REG_FILE
-            always @(posedge clkb) begin
+            always @(negedge clk) begin//posedge clkb
                 if(i == wa && we) begin
                     mem[i] <= wd;                    
                 end

@@ -23,6 +23,8 @@ module aludec(
 
                     3'b010: 
                         ALUControl = 5'b00101;  // slt
+                    3'b011:
+                        ALUControl = 5'b10100; // sltu
                     3'b110: 
                         ALUControl = 5'b00011;  // or
                     3'b111: 

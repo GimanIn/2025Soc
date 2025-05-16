@@ -19,5 +19,7 @@ module mux3(
 		else
 			out = 32'h0;
 	end
-
+	/*always@(*)begin
+		$display("sel: %b, in0: %h, in1: %h, in2: %h, out: %h", sel, in0, in1, in2, out);
+		end*/
 endmodule

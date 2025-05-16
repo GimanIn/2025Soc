@@ -7,6 +7,7 @@ module branch_logic(
     input Branch,              // 브랜치 명령어 신호
     input jalE,                 // JAL 명령어 신호
     input jalrE,                // JALR 명령어 신호
+    input sltu_result,
     output reg [1:0] PCSrc      // PC Source 제어 신호
 );
 
@@ -27,8 +28,8 @@ module branch_logic(
                 3'b001: PCSrc = (~Z_flag) ? 2'b01 : 2'b00; // BNE
                 3'b100: PCSrc = (N_flag) ? 2'b01 : 2'b00;  // BLT
                 3'b101: PCSrc = (~N_flag) ? 2'b01 : 2'b00; // BGE
-                3'b110: PCSrc = (~C_flag) ? 2'b01 : 2'b00; // BLTU
-                3'b111: PCSrc = (C_flag) ? 2'b01 : 2'b00;  // BGEU
+                3'b110: PCSrc = (sltu_result==1'b1) ? 2'b01 : 2'b00; // BLTU
+                3'b111: PCSrc = (sltu_result==1'b0) ? 2'b01 : 2'b00;  // BGEU
                 default: PCSrc = 2'b00;                   // 기본값: PC + 4
             endcase
             
