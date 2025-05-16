@@ -9,7 +9,7 @@ UUM=FALSE
 KDB=FALSE
 USE_NOVAS_HOME=FALSE
 COSIM=FALSE
-TOP=flopenr isa_testbench 
+TOP=flopr isa_testbench 
 OPTION=-ssv -ssy 
 ELAB_OPTION=-ssv -ssy 
 

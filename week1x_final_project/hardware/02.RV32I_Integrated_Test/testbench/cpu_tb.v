@@ -264,16 +264,16 @@ if (1) begin
     check_result_rf(5'd3,  32'h00000064, "R-Type ADD");
     check_result_rf(5'd4,  32'hfffffed4, "R-Type SUB");
     check_result_rf(5'd5,  32'hffff9c00, "R-Type SLL");
-    //check_result_rf(5'd6,  32'h1,        "R-Type SLT");
+    check_result_rf(5'd6,  32'h1,        "R-Type SLT");
     check_result_rf(5'd7,  32'h0,        "R-Type SLTU");
     check_result_rf(5'd8,  32'hffffff54, "R-Type XOR");
     check_result_rf(5'd9,  32'hffffffdc, "R-Type OR");
     check_result_rf(5'd10, 32'h00000088, "R-Type AND");
     check_result_rf(5'd11, 32'h00ffffff, "R-Type SRL");
-    //check_result_rf(5'd12, 32'hffffffff, "R-Type SRA");
+    check_result_rf(5'd12, 32'hffffffff, "R-Type SRA");
     check_result_rf(5'd13, 32'hf9c00000, "R-Type SLLI");
     check_result_rf(5'd14, 32'h00000fff, "R-Type SRLI");
-    //check_result_rf(5'd15, 32'hffffffff, "R-Type SRAI");
+    check_result_rf(5'd15, 32'hffffffff, "R-Type SRAI");
 end
 
 if (1) begin
@@ -346,9 +346,9 @@ if (1) begin
     check_result_rf(5'd2,  32'hdeadbeef, "I-Type LW");
 
     check_result_rf(5'd3,  32'hffffbeef, "I-Type LH 0");
-    // check_result_rf(5'd4,  32'hffffbeef, "I-Type LH 1");
+    //check_result_rf(5'd4,  32'hffffbeef, "I-Type LH 1");
     check_result_rf(5'd5,  32'hffffdead, "I-Type LH 2");
-    // check_result_rf(5'd6,  32'hffffdead, "I-Type LH 3");
+    //check_result_rf(5'd6,  32'hffffdead, "I-Type LH 3");
 
     check_result_rf(5'd7,  32'hffffffef, "I-Type LB 0");
     check_result_rf(5'd8,  32'hffffffbe, "I-Type LB 1");
@@ -356,9 +356,9 @@ if (1) begin
     check_result_rf(5'd10, 32'hffffffde, "I-Type LB 3");
 
     check_result_rf(5'd11, 32'h0000beef, "I-Type LHU 0");
-    // check_result_rf(5'd12, 32'h0000beef, "I-Type LHU 1");
+    //check_result_rf(5'd12, 32'h0000beef, "I-Type LHU 1");
     check_result_rf(5'd13, 32'h0000dead, "I-Type LHU 2");
-    // check_result_rf(5'd14, 32'h0000dead, "I-Type LHU 3");
+    ///check_result_rf(5'd14, 32'h0000dead, "I-Type LHU 3");
 
     check_result_rf(5'd15, 32'h000000ef, "I-Type LBU 0");
     check_result_rf(5'd16, 32'h000000be, "I-Type LBU 1");
@@ -593,7 +593,7 @@ if (1) begin
     end
 end
 
-/*if (0) begin
+if (1) begin
    // Test CSR Insts -----------------------------------------------------
    // - CSRRW, CSRRWI
    reset();
@@ -623,7 +623,7 @@ end
    done = 1;
 
    $display("[%d] Test CSRRWI passed!", current_test_id);
-end*/
+end
 
 
 if (1) begin

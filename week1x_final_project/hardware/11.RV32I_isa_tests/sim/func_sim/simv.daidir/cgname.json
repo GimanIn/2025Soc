@@ -5,6 +5,24 @@
         "module",
         1
     ],
+    "ASYNC_RAM_DP_WBE": [
+        "ASYNC_RAM_DP_WBE",
+        "TV9z4",
+        "module",
+        8
+    ],
+    "branch_logic": [
+        "branch_logic",
+        "swNKB",
+        "module",
+        9
+    ],
+    "controller": [
+        "controller",
+        "KBY0m",
+        "module",
+        10
+    ],
     "cla_8bit": [
         "cla_8bit",
         "c8pr1",
@@ -23,11 +41,11 @@
         "module",
         4
     ],
-    "flopenr": [
-        "flopenr",
-        "rCRUN",
+    "flopr": [
+        "flopr",
+        "RCrG2",
         "module",
-        5
+        11
     ],
     "isa_testbench": [
         "isa_testbench",
