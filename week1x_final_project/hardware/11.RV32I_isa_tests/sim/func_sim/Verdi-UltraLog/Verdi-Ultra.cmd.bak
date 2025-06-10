@@ -1,0 +1,18 @@
+verdiSetActWin -dock widgetDock_<Message>
+debImport "-sv" "-f" "run.f"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+verdiWindowResize -win $_Verdi_1 "221" "129" "900" "700"
+verdiWindowResize -win $_Verdi_1 "221" "129" "900" "700"
+verdiShowWindow -win $_Verdi_1 -switchFS
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcHBSelect "isa_testbench" -win $_nTrace1
+srcSetScope "isa_testbench" -delim "." -win $_nTrace1
+srcHBSelect "isa_testbench" -win $_nTrace1
+srcHBSelect "isa_testbench.CPU" -win $_nTrace1
+schCreateWindow -delim "." -win $_nSchema1 -scope "isa_testbench"
+verdiSetActWin -win $_nSchema_2
+amsConfigOpen
+amsConfigSwitchTab -tab extra
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+verdiSetActWin -win $_nSchema_2
+debExit

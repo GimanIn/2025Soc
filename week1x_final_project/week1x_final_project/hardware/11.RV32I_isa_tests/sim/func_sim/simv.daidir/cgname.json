@@ -1,0 +1,62 @@
+{
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        1
+    ],
+    "ASYNC_RAM_DP_WBE": [
+        "ASYNC_RAM_DP_WBE",
+        "TV9z4",
+        "module",
+        8
+    ],
+    "branch_logic": [
+        "branch_logic",
+        "swNKB",
+        "module",
+        9
+    ],
+    "controller": [
+        "controller",
+        "KBY0m",
+        "module",
+        10
+    ],
+    "cla_8bit": [
+        "cla_8bit",
+        "c8pr1",
+        "module",
+        2
+    ],
+    "full_adder": [
+        "full_adder",
+        "BEdzp",
+        "module",
+        3
+    ],
+    "mux3": [
+        "mux3",
+        "rsgQu",
+        "module",
+        4
+    ],
+    "flopr": [
+        "flopr",
+        "RCrG2",
+        "module",
+        11
+    ],
+    "isa_testbench": [
+        "isa_testbench",
+        "Iymkk",
+        "module",
+        6
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        7
+    ]
+}

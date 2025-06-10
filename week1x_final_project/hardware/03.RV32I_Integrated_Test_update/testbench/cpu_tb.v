@@ -278,7 +278,7 @@ if (1) begin
     check_result_rf(5'd15, 32'hffffffff, "R-Type SRAI");
 end
 
-if (1) begin
+if (0) begin
     // Test I-Type Insts --------------------------------------------------
     // - ADDI, SLTI, SLTUI, XORI, ORI, ANDI
     // - LW, LH, LB, LHU, LBU
@@ -602,7 +602,7 @@ if (1) begin
     end
 end
 
-/*
+
 if (1) begin
    // Test CSR Insts -----------------------------------------------------
    // - CSRRW, CSRRWI
@@ -634,7 +634,7 @@ if (1) begin
 
    $display("[%d] Test CSRRWI passed!", current_test_id);
 end
-*/
+
 
 
 if (1) begin

@@ -2,7 +2,7 @@ Magic 271485
 Revision Verdi_S-2021.09-SP2-9
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 0 25 2165 323 125 65
+viewPort 0 25 1920 270 125 65
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
@@ -16,16 +16,16 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 0.000000 898.900000
-cursor 10.000000
+zoom 2615.398409 3010.398409
+cursor 410.000000
 marker 0.000000
 
 ; user define markers
 ; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
-top 12
+top 1
 ; marker line index
-markerPos 21
+markerPos 6
 
 ; event list
 ; addEvent event_name event_expression
@@ -47,29 +47,27 @@ curSTATUS ByChange
 
 addGroup "G1"
 activeDirFile "" "/home1/socuser10/2025Soc/week1x_final_project/hardware/02.RV32I_Integrated_Test/sim/func_sim/wave.fsdb"
-addSignal -h 15 -UNSIGNED -BIN /cpu_tb/CPU/icpu/u_controller/opcode[6:0]
-addSignal -h 15 -UNSIGNED -BIN -holdScope funct3[2:0]
-addSignal -h 15 -UNSIGNED -BIN -holdScope ALUop[1:0]
-addSignal -h 15 -UNSIGNED -BIN -holdScope funct7[6:0]
-addSignal -h 15 -holdScope ALUControl[4:0]
-addSignal -h 15 -UNSIGNED -BIN /cpu_tb/CPU/icpu/InstrD[31:0]
-addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/PCSrc[1:0]
-addSignal -h 15 -holdScope ResultSrcE[0]
-addSignal -h 15 -holdScope RdE[4:0]
-addSignal -h 15 -holdScope Rs2D[4:0]
-addSignal -h 15 -holdScope Rs1D[4:0]
+addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/SrcAE[31:0]
+addSignal -h 15 -holdScope SrcBE[31:0]
+addSignal -h 15 -UNSIGNED -BIN -holdScope ALUControlE[4:0]
+addSignal -h 15 -holdScope ALUResultE[31:0]
 addSignal -h 15 -holdScope RegWriteW
-addSignal -h 15 -holdScope RegWriteM
-addSignal -h 15 -holdScope RdW[4:0]
-addSignal -h 15 -holdScope RdM[4:0]
-addSignal -h 15 -holdScope Rs2E[4:0]
-addSignal -h 15 -holdScope Rs1E[4:0]
-addSignal -h 15 -holdScope PCF[31:0]
-addSignal -h 15 -holdScope PC_nextF[31:0]
-addSignal -h 15 -holdScope n_rst
-addSignal -h 15 -holdScope clk
+addSignal -h 15 -holdScope ResultW[31:0]
 addGroup "G2"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm
+activeDirFile "" "/home1/socuser10/2025Soc/week1x_final_project/hardware/02.RV32I_Integrated_Test/sim/func_sim/wave.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/cpu_tb"
+
+SCOPE_LIST_BEGIN
+"/cpu_tb"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
 

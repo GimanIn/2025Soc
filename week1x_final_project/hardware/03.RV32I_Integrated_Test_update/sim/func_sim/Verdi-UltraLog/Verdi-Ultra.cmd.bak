@@ -1,0 +1,14 @@
+verdiSetActWin -dock widgetDock_<Message>
+debImport "-sv" "-f" "run.f"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+verdiWindowResize -win $_Verdi_1 "221" "129" "900" "700"
+verdiWindowResize -win $_Verdi_1 "221" "129" "900" "700"
+verdiShowWindow -win $_Verdi_1 -switchFS
+srcHBSelect "cpu_tb" -win $_nTrace1
+srcSetScope "cpu_tb" -delim "." -win $_nTrace1
+srcHBSelect "cpu_tb" -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcHBSelect "cpu_tb.CPU" -win $_nTrace1
+schCreateWindow -delim "." -win $_nSchema1 -scope "cpu_tb"
+verdiSetActWin -win $_nSchema_2
+debExit

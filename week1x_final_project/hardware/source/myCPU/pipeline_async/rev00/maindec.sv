@@ -24,12 +24,12 @@ module maindec(
             7'b010_0011:{Branch, Jal, Jalr, ResultSrc, MemWrite, ALUSrcA, ALUSrcB, ImmSrc, ALUop, RegWrite} = 15'b0_0_0_00_1_00_1_001_00_0;// SW
             7'b011_0011:{Branch, Jal, Jalr, ResultSrc, MemWrite, ALUSrcA, ALUSrcB, ImmSrc, ALUop, RegWrite} = 15'b0_0_0_00_0_00_0_000_10_1;// R-type
             7'b110_0011:{Branch, Jal, Jalr, ResultSrc, MemWrite, ALUSrcA, ALUSrcB, ImmSrc, ALUop, RegWrite} = 15'b1_0_0_00_0_00_0_010_01_0;// BEQ, BNE 등
-            7'b001_0011:{Branch, Jal, Jalr, ResultSrc, MemWrite, ALUSrcA, ALUSrcB, ImmSrc, ALUop, RegWrite} = 15'b0_0_0_00_0_00_1_000_11_1;// I-type (ADDI, SLTI 등)10
-            7'b110_1111:{Branch, Jal, Jalr, ResultSrc, MemWrite, ALUSrcA, ALUSrcB, ImmSrc, ALUop, RegWrite} = 15'b0_1_0_10_0_10_0_011_00_1;// JAL
-            7'b110_0111:{Branch, Jal, Jalr, ResultSrc, MemWrite, ALUSrcA, ALUSrcB, ImmSrc, ALUop, RegWrite} = 15'b0_0_1_10_0_00_1_000_00_1;// JALR
+            7'b001_0011:{Branch, Jal, Jalr, ResultSrc, MemWrite, ALUSrcA, ALUSrcB, ImmSrc, ALUop, RegWrite} = 15'b0_0_0_00_0_00_1_000_10_1;// I-type (ADDI, SLTI 등)10
+            7'b110_1111:{Branch, Jal, Jalr, ResultSrc, MemWrite, ALUSrcA, ALUSrcB, ImmSrc, ALUop, RegWrite} = 15'b0_1_0_10_0_10_0_011_01_1;// JAL
+            7'b110_0111:{Branch, Jal, Jalr, ResultSrc, MemWrite, ALUSrcA, ALUSrcB, ImmSrc, ALUop, RegWrite} = 15'b0_0_1_10_0_00_1_000_10_1;// JALR
             7'b011_0111:{Branch, Jal, Jalr, ResultSrc, MemWrite, ALUSrcA, ALUSrcB, ImmSrc, ALUop, RegWrite} = 15'b0_0_0_00_0_10_1_100_00_1;// LUI
             7'b001_0111:{Branch, Jal, Jalr, ResultSrc, MemWrite, ALUSrcA, ALUSrcB, ImmSrc, ALUop, RegWrite} = 15'b0_0_0_00_0_01_1_100_00_1;// AUIPC
-            7'b111_0011:{Branch, Jal, Jalr, ResultSrc, MemWrite, ALUSrcA, ALUSrcB, ImmSrc, ALUop, RegWrite} = 15'b0_0_0_00_0_00_1_101_00_1;
+            7'b111_0011:{Branch, Jal, Jalr, ResultSrc, MemWrite, ALUSrcA, ALUSrcB, ImmSrc, ALUop, RegWrite} = 15'b0_0_0_00_0_00_1_101_00_1;// Csrrw
             default:
                 {Branch, Jal, Jalr, ResultSrc, MemWrite, ALUSrcA, ALUSrcB, ImmSrc, ALUop, RegWrite} 
                     = 15'b000_00_0_00_000_00_0;

@@ -115,5 +115,15 @@ module SMU_RV32I_System (
     .tbman_wdata  (BE_WD),            // tbman으로 보낼 데이터
     .tbman_rdata  (tbman_rdata)       // tbman의 읽기 데이터
   );
+  /*TimerCounter u_TimerCounter (
+    .clk (clk),
+    .reset (~n_rst),
+    .CS_N (cs_timer_n),
+    .RD_N (MemWrite),//~data_re
+    .WR_N (~MemWrite),//~data_we
+    .Adder (DataAdr[11:0]),
+    .DataIn (write_Data),
+    Intr ()
+  )*/
 
 endmodule

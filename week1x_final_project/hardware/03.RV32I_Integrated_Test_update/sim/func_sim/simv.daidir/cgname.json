@@ -11,18 +11,6 @@
         "module",
         2
     ],
-    "branch_logic": [
-        "branch_logic",
-        "swNKB",
-        "module",
-        9
-    ],
-    "controller": [
-        "controller",
-        "KBY0m",
-        "module",
-        10
-    ],
     "cla_8bit": [
         "cla_8bit",
         "c8pr1",
