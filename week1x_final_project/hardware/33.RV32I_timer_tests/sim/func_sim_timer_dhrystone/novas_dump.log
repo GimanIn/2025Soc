@@ -146,24 +146,24 @@ LD_LIBRARY_PATH=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/lib:/tools/synopsys_202
 LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:
 DVE_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/gui/dve
 SNPS_INTERNAL_VCS_LINUX_OS=linux
-SNPS_VCS_INTERNAL_ROOT_START_TIME=1747896446.819161358
-SSH_CONNECTION=203.237.200.20 49743 192.168.0.170 22
+SNPS_VCS_INTERNAL_ROOT_START_TIME=1749580258.130340890
+SSH_CONNECTION=182.230.93.220 51954 192.168.0.170 22
 LANG=ko_KR.UTF-8
 HISTCONTROL=ignoredups
 DISPLAY=localhost:11.0
 HOSTNAME=sse506-s1
 SCRNAME=vcs
 OLDPWD=/home1/socuser10/2025Soc/week1x_final_project/hardware/33.RV32I_timer_tests/sim/func_sim_timer_dhrystone/simv.daidir/debug_dump/fsearch
-SNPS_VCS_INTERNAL_CURR_PID=1200758
+SNPS_VCS_INTERNAL_CURR_PID=1014615
 TOOL_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64
-MAKE_TERMOUT=/dev/pts/19
+MAKE_TERMOUT=/dev/pts/18
 SNPS_VCS_CLANG_PATH=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/clang
 SNPSLMD_LICENSE_FILE=27020@smu409-01:27020@117.16.175.176
 OVA_UUM=0
 MFLAGS=
 VCS_MODE_FLAG=64
 which_declare=declare -f
-XDG_SESSION_ID=3107
+XDG_SESSION_ID=3884
 USER=socuser10
 VCS_MX_HOME_INTERNAL=1
 DC_HOME=/tools/synopsys_2021/syn/S-2021.06-SP5-5
@@ -175,32 +175,32 @@ FM_HOME=/tools/synopsys_2021/fm/S-2021.06-SP5
 VMR_MODE_FLAG=64
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
 HOME=/home1/socuser10
-SSH_CLIENT=203.237.200.20 49743 22
+SSH_CLIENT=182.230.93.220 51954 22
 VCS_ARG_ADDED_FOR_TMP=1
 XDG_DATA_DIRS=/home1/socuser10/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 VCS_USER_OPTIONS=-full64 -R -debug_acc+all -sverilog -kdb -timescale=1ns/1ns -f run.f
 VCS_ARCH_OVERRIDE=linux
 PT_HOME=/tools/synopsys_2021/prime/S-2021.06-SP5-2
-SSH_TTY=/dev/pts/19
+SSH_TTY=/dev/pts/18
 MAIL=/var/spool/mail/socuser10
 ICC2_HOME=/tools/synopsys_2021/icc2/S-2021.06-SP5-1
 TERM=xterm
 SHELL=/bin/bash
-SNPS_VCS_INTERNAL_ROOT_PID=1200758
+SNPS_VCS_INTERNAL_ROOT_PID=1014615
 SCRIPT_NAME=vcs
 SNPS_VCS_INTERNAL_MEMPRELOAD_USE_LIBC=1
-SNPS_VCS_TMPDIR=/tmp/vcs_20250522064726_1200758
+SNPS_VCS_TMPDIR=/tmp/vcs_20250610183058_1014615
 MAKELEVEL=1
 VERDI_HOME=/tools/synopsys_2021/verdi/S-2021.09-SP2-9
-TURBO_LOG_DIR=/tmp/vcs_20250522064726_1200758
+TURBO_LOG_DIR=/tmp/vcs_20250610183058_1014615
 SHLVL=2
 VCS_COM=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/bin/vcs1
-MAKE_TERMERR=/dev/pts/19
+MAKE_TERMERR=/dev/pts/18
 VCS_ARCH=linux64
 VCS_DEPTH=0
 GDK_BACKEND=x11
 LOGNAME=socuser10
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-i4biEU1RIR,guid=fe94fdabf2d92bbe7b26ec24682ea23b
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-j84yNSgtop,guid=682c18c107a6c3616e57849e684869ae
 XDG_RUNTIME_DIR=/run/user/1014
 PATH=.:/tools/synopsys_2021/prime/S-2021.06-SP5-2/bin:/tools/synopsys_2021/fm/S-2021.06-SP5/bin:/tools/synopsys_2021/syn/S-2021.06-SP5-5/bin:/tools/synopsys_2021/lc/S-2021.06-SP5/bin:/tools/synopsys_2021/icc2/S-2021.06-SP5-1/bin:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/bin:/tools/synopsys_2021/vcs/S-2021.09-SP2-9/bin:/home1/socuser10/.local/bin:/home1/socuser10/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/synopsys/VCS/bin:/tools/riscv/toolchain/riscv-toolchain-fa19/bin
 VCS_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9
@@ -221,8 +221,8 @@ FLEXLM_BORROWFILE=/home1/socuser10/.sse506-s1-borrow.txt
 Runtime command line arguments:
 argv[0]=simv
 220 profile - 100
-          CPU/Mem usage: 0.030 sys,  0.120 user,  287.20M mem
-221 Elapsed time:    0:00:00    Thu May 22 15:47:28 2025
+          CPU/Mem usage: 0.020 sys,  0.120 user,  287.19M mem
+221 Elapsed time:    0:00:01    Wed Jun 11 03:31:00 2025
 222 User CPU time used: 0 seconds
 223 System CPU time used: 0 seconds
 224 pliAppInit
@@ -251,55 +251,55 @@ argv[0]=simv
 247 *Verdi* : Begin traversing the scopes, layer (0).
 248 *Verdi* : End of traversing.
 249 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.040 sys,  0.130 user,  388.09M mem
-                   incr: 0.010 sys,  0.010 user,  9.18M mem
-                   accu: 0.010 sys,  0.010 user,  9.18M mem
-              accu incr: 0.010 sys,  0.010 user,  9.18M mem
+          CPU/Mem usage: 0.030 sys,  0.130 user,  388.08M mem
+                   incr: 0.000 sys,  0.010 user,  9.17M mem
+                   accu: 0.000 sys,  0.010 user,  9.17M mem
+              accu incr: 0.000 sys,  0.010 user,  9.17M mem
 
-          Count usage: 1329 var,  1052 idcode,  230 callback
-                 incr: 1329 var,  1052 idcode,  230 callback
-                 accu: 1329 var,  1052 idcode,  230 callback
-            accu incr: 1329 var,  1052 idcode,  230 callback
-250 Elapsed time:    0:00:00    Thu May 22 15:47:28 2025
+          Count usage: 1330 var,  1052 idcode,  231 callback
+                 incr: 1330 var,  1052 idcode,  231 callback
+                 accu: 1330 var,  1052 idcode,  231 callback
+            accu incr: 1330 var,  1052 idcode,  231 callback
+250 Elapsed time:    0:00:01    Wed Jun 11 03:31:00 2025
 251 User CPU time used: 0 seconds
 252 System CPU time used: 0 seconds
 253 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.040 sys,  0.130 user,  389.14M mem
+          CPU/Mem usage: 0.030 sys,  0.130 user,  389.13M mem
                    incr: 0.000 sys,  0.000 user,  1.05M mem
-                   accu: 0.010 sys,  0.010 user,  10.23M mem
+                   accu: 0.000 sys,  0.010 user,  10.22M mem
               accu incr: 0.000 sys,  0.000 user,  1.05M mem
 
-          Count usage: 1329 var,  1052 idcode,  230 callback
+          Count usage: 1330 var,  1052 idcode,  231 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 1329 var,  1052 idcode,  230 callback
+                 accu: 1330 var,  1052 idcode,  231 callback
             accu incr: 0 var,  0 idcode,  0 callback
-254 Elapsed time:    0:00:00    Thu May 22 15:47:28 2025
+254 Elapsed time:    0:00:01    Wed Jun 11 03:31:00 2025
 255 User CPU time used: 0 seconds
 256 System CPU time used: 0 seconds
-257 End of simulation at 34978570
-258 Memory usage: 602.808 M
-259 Maximum resident set size: 210 MB
+257 End of simulation at 7832710
+258 Memory usage: 533.582 M
+259 Maximum resident set size: 207 MB
 260 Hard page faults: 0
-261 Soft page faults: 36088
-262 Elapsed time:    0:00:31    Thu May 22 15:47:59 2025
-263 User CPU time used: 35 seconds
+261 Soft page faults: 35394
+262 Elapsed time:    0:00:07    Wed Jun 11 03:31:06 2025
+263 User CPU time used: 7 seconds
 264 System CPU time used: 0 seconds
 265 Begin FSDB profile info:
-266 FSDB Writer : bc1(20774145) bcn(77378052) mtf/stf(0/13)
-FSDB Writer elapsed time : flush(4.368749) io wait(0.000000) theadpool wait(0.000000)
+266 FSDB Writer : bc1(4412641) bcn(17532737) mtf/stf(0/2)
+FSDB Writer elapsed time : flush(1.036057) io wait(0.000000) theadpool wait(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 267 End FSDB profile info
-268 FSDB closed. Name: wave.fsdb Size: 6049580
+268 FSDB closed. Name: wave.fsdb Size: 2490035
 269 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
-270                      - BlockUsed:773 Acquire:101649824 BufferUsed:1516557536
-271                      - Flush:3 Expand:0 ProducerWait:0 ConsumerWait:643
-272                      - MainProducerTime:28.162843776 TotalConsumerTime:7.340839639
-273                      - ElapsedTime:31.381985000
-274 Producer   0 profile - BlockUsed:773 Acquire:101649824 BufferUsed:1516557536
-275 Consumer   0 profile - Affinity:-1 CPUTime:7.340839639 LifeTime:30.931076176 (0.24%)
-276                      - BlockUsed:773 Acquire:101649824 BufferUsed:1516557536
+270                      - BlockUsed:175 Acquire:22728418 BufferUsed:341286650
+271                      - Flush:3 Expand:0 ProducerWait:0 ConsumerWait:153
+272                      - MainProducerTime:6.789069608 TotalConsumerTime:1.437801763
+273                      - ElapsedTime:6.781832000
+274 Producer   0 profile - BlockUsed:175 Acquire:22728418 BufferUsed:341286650
+275 Consumer   0 profile - Affinity:-1 CPUTime:1.437801763 LifeTime:6.272246287 (0.23%)
+276                      - BlockUsed:175 Acquire:22728418 BufferUsed:341286650
 277 SimExit
-278 Elapsed time:    0:00:31    Thu May 22 15:47:59 2025
-279 User CPU time used: 35 seconds
+278 Elapsed time:    0:00:07    Wed Jun 11 03:31:06 2025
+279 User CPU time used: 8 seconds
 280 System CPU time used: 0 seconds
 281 Sim process exit

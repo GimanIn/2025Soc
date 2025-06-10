@@ -1,30 +1,82 @@
 module branch_logic(
-    input Z_flag,               // ALU의 Zero flag
-    input N_flag,               // ALU의 Negative flag (음수 여부)
-    input C_flag,               // ALU의 Carry flag (unsigned 비교에 사용)
-    input [6:0] opcode,          // 명령어 opcode
-    input [2:0] funct3,          // 브랜치 명령어의 funct3 필드
-    input Branch,    
-    input sltu_result,            // Control Unit에서 온 Branch 신호
-    output reg Btaken            // 분기 발생 여부
+    // input
+    Branch,
+    jalE,
+    jalrE,
+    N_flag,
+    Z_flag,
+    C_flag,
+    V_flag,
+    funct3,
+
+    // output
+    PCSrc 
 );
 
-    always @(*) begin
-        // 기본값 설정 (분기 발생하지 않음)
-        Btaken = 1'b0;
+input Branch;
+input jalE;
+input jalrE;
+input N_flag, Z_flag, C_flag, V_flag;
+input [2:0] funct3;
+output [1:0] PCSrc;
 
-        // Branch 명령어인지 확인 (opcode가 브랜치 명령어일 때만 실행)
-        if (Branch) begin
-            case (funct3)
-                3'b000: Btaken = Z_flag;       // BEQ (Equal일 때 분기)
-                3'b001: Btaken = ~Z_flag;      // BNE (Not Equal일 때 분기)
-                3'b100: Btaken = N_flag;       // BLT (Less Than, 부호 있는 비교)
-                3'b101: Btaken = ~N_flag;      // BGE (Greater or Equal, 부호 있는 비교)
-                3'b110: Btaken = (sltu_result==1'b1);      // BLTU (Less Than, unsigned 비교)
-                3'b111: Btaken = (sltu_result==1'b0);      // BGEU (Greater or Equal, unsigned 비교)
-                default: Btaken = 1'b0;        // 기본값: 분기하지 않음
-            endcase
-        end
+ wire beq, bne, blt, bltu, bge, bgeu;
+
+    //TA edit section
+    localparam OPC_BRANCH = 7'd99;
+    localparam OPC_JAL    = 7'd111;
+
+    localparam F3_BEQ = 3'b000;
+    localparam F3_BNE = 3'b001;
+    localparam F3_BLT = 3'b100;
+    localparam F3_BGE = 3'b101;
+    localparam F3_BLTU = 3'b110;
+    localparam F3_BGEU = 3'b111;
+    
+    reg branch_type;
+    reg [1:0] pcsrc;
+    wire branch_taken;
+
+    wire jalrE;
+    
+    //branch condition assignment
+    assign beq = (Z_flag == 1);
+    assign bne = (Z_flag == 0);
+    assign blt = (N_flag != V_flag);
+    assign bge = (N_flag == V_flag);
+    assign bltu = (C_flag == 0);
+    assign bgeu = (C_flag == 1);
+
+    assign branch_taken = (Branch) && (branch_type);
+
+    //branch control logic
+    always @(*)begin
+        case(funct3)
+            F3_BEQ: branch_type = beq;
+            F3_BNE: branch_type = bne;
+            F3_BLT: branch_type = blt;
+            F3_BGE: branch_type = bge;
+            F3_BLTU: branch_type = bltu;
+            F3_BGEU: branch_type = bgeu;
+            default: branch_type = 1'b0;
+        endcase
+    end
+
+    //PCSrc assignment
+    assign PCSrc = pcsrc;
+
+    //PCSrc control
+    always @(*)begin
+        if(branch_taken || jalE)
+            pcsrc = 2'b01;
+
+        else if(jalrE)
+            pcsrc = 2'b10;
+
+        else
+            pcsrc = 2'b00;
     end
 
 endmodule
+
+

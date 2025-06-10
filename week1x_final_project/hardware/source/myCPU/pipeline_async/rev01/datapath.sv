@@ -383,7 +383,7 @@ ID_EX u_ID_EX(
         .b_in       (SrcBE),
         .ALUControl (ALUControlE),
         .result     (ALUResultE),
-        .sltu_result(sltu_result),
+        //.sltu_result(sltu_result),
         .aZ         (Z_flagE),
         .aN         (N_flagE),
         .aC         (C_flagE),
@@ -402,7 +402,7 @@ ID_EX u_ID_EX(
     // Branch Logic
     branch_logic u_branch_logic(
         .funct3 (InstrE[14:12]),
-        .sltu_result(sltu_result),
+        //.sltu_result(sltu_result),
         .Branch (BranchE),
         .jalE   (JalE),
         .jalrE  (JalrE),

@@ -64,11 +64,6 @@ module controller(
     input [6:0] funct7,                // 명령어의 funct7 필드
     input Btaken,                // 브랜치 성공 여부
                // 메모리 쓰기 신호
-
-    input N_flag,
-    input Z_flag,
-    input C_flag,
-    input V_flag,
     output [1:0] ResultSrc,      // 결과 소스 제어
     output [4:0] ALUControl,      // ALU 제어 신호
     output [1:0] ALUSrcA,        // ALU A 입력 제어

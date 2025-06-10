@@ -83,7 +83,7 @@ ANF: vhdi_enc_ist_get_module_id('./simv: undefined symbol: vhdi_enc_ist_get_modu
 ANF: vhdi_enc_def_get_handle_by_module_id('./simv: undefined symbol: vhdi_enc_def_get_handle_by_module_id')
 VCS compile option:
  option[0]: ./simv
- option[1]: +hex_file=tbman_printf.hex
+ option[1]: +hex_file=dhrystone.hex
  option[2]: /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/bin/vcs1
  option[3]: -Mcc=gcc
  option[4]: -Mcplusplus=g++
@@ -110,18 +110,17 @@ VCS compile option:
  option[25]: -kdb
  option[26]: -Xufe=2steps
  option[27]: -timescale=1ns/1ns
- option[28]: +define+SIM
- option[29]: -picarchive
- option[30]: -P
- option[31]: /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/verdi.tab
- option[32]: -fsdb
- option[33]: -sverilog
- option[34]: -gen_obj
- option[35]: -f
- option[36]: run.f
- option[37]: -load
- option[38]: /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/libnovas.so:FSDBDumpCmd
- option[39]: timescale=1ns/1ns
+ option[28]: -picarchive
+ option[29]: -P
+ option[30]: /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/verdi.tab
+ option[31]: -fsdb
+ option[32]: -sverilog
+ option[33]: -gen_obj
+ option[34]: -f
+ option[35]: run.f
+ option[36]: -load
+ option[37]: /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/libnovas.so:FSDBDumpCmd
+ option[38]: timescale=1ns/1ns
 Chronologic Simulation VCS Release S-2021.09-SP2-9_Full64
 Linux 4.18.0-553.22.1.el8_10.x86_64 #1 SMP Wed Sep 25 09:20:43 UTC 2024 x86_64
 CPU cores: 64
@@ -144,14 +143,14 @@ Runtime environment variables:
 LD_LIBRARY_PATH=/tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUXAMD64::/usr/lib
 LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:
 DVE_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/gui/dve
-SSH_CONNECTION=49.172.34.217 49222 192.168.0.170 22
+SSH_CONNECTION=182.230.93.220 51954 192.168.0.170 22
 LANG=ko_KR.UTF-8
 HISTCONTROL=ignoredups
-DISPLAY=localhost:12.0
+DISPLAY=localhost:11.0
 HOSTNAME=sse506-s1
 SNPSLMD_LICENSE_FILE=27020@smu409-01:27020@117.16.175.176
 which_declare=declare -f
-XDG_SESSION_ID=3867
+XDG_SESSION_ID=3884
 USER=socuser10
 DC_HOME=/tools/synopsys_2021/syn/S-2021.06-SP5-5
 SYNOPSYS_LC_ROOT=/tools/synopsys_2021/lc/S-2021.06-SP5
@@ -159,11 +158,11 @@ PWD=/home1/socuser10/2025Soc/week1x_final_project/hardware/31.RV32I_tbman_tests/
 FM_HOME=/tools/synopsys_2021/fm/S-2021.06-SP5
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
 HOME=/home1/socuser10
-SSH_CLIENT=49.172.34.217 49222 22
+SSH_CLIENT=182.230.93.220 51954 22
 XDG_DATA_DIRS=/home1/socuser10/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 VCS_ARCH_OVERRIDE=linux
 PT_HOME=/tools/synopsys_2021/prime/S-2021.06-SP5-2
-SSH_TTY=/dev/pts/21
+SSH_TTY=/dev/pts/18
 MAIL=/var/spool/mail/socuser10
 ICC2_HOME=/tools/synopsys_2021/icc2/S-2021.06-SP5-1
 TERM=xterm
@@ -172,7 +171,7 @@ VERDI_HOME=/tools/synopsys_2021/verdi/S-2021.09-SP2-9
 SHLVL=1
 GDK_BACKEND=x11
 LOGNAME=socuser10
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-D0U6MqOeG8,guid=654aab6f8b18d13a24f55ba56847e4ab
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-j84yNSgtop,guid=682c18c107a6c3616e57849e684869ae
 XDG_RUNTIME_DIR=/run/user/1014
 PATH=/tools/synopsys_2021/prime/S-2021.06-SP5-2/bin:/tools/synopsys_2021/fm/S-2021.06-SP5/bin:/tools/synopsys_2021/syn/S-2021.06-SP5-5/bin:/tools/synopsys_2021/lc/S-2021.06-SP5/bin:/tools/synopsys_2021/icc2/S-2021.06-SP5-1/bin:/tools/synopsys_2021/verdi/S-2021.09-SP2-9/bin:/tools/synopsys_2021/vcs/S-2021.09-SP2-9/bin:/home1/socuser10/.local/bin:/home1/socuser10/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/synopsys/VCS/bin:/tools/riscv/toolchain/riscv-toolchain-fa19/bin
 VCS_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9
@@ -193,87 +192,87 @@ SPECMAN_OUTPUT_TO_TTY=1
 FLEXLM_BORROWFILE=/home1/socuser10/.sse506-s1-borrow.txt
 Runtime command line arguments:
 argv[0]=./simv
-argv[1]=+hex_file=tbman_printf.hex
-194 profile - 100
-          CPU/Mem usage: 0.030 sys,  0.110 user,  287.19M mem
-195 Elapsed time:    0:00:00    Tue Jun 10 19:07:35 2025
-196 User CPU time used: 0 seconds
-197 System CPU time used: 0 seconds
-198 pliAppInit
-199 [SC]Init: MemoryConsumed=0.00MB ElapsedTime=0hour 0min. 0sec.
-200 FSDB_GATE is set.
-201 FSDB_RTL is set.
-202 FSDB_FIELDTYPE is set.
-203 FSDB_ALIAS_ARRAY_ELEM is set to 4294967295.
-204 Enable Parallel Dumping.
-205 pliAppMiscSet: New Sim Round
-206 pliEntryInit
-207 LIBSSCORE=found /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/lib/LINUXAMD64/libsscore_vcs202109.so through $NOVAS_HOME setting.
-208 FSDB Dumper for VCS, Release Verdi_S-2021.09-SP2-9, Linux x86_64/64bit, 03/29/2023
-209 (C) 1996 - 2023 by Synopsys, Inc.
-210 sps_call_fsdbDumpfile_main at 0 : ../../testbench/c_tests_tb.v(125)
-211 argv[0]: (wave.fsdb)
-212 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
-213 *Verdi* : Create FSDB file 'wave.fsdb'
-214 [spi_vcs_vd_ppi_create_root]: no upf option
-215 compile option from '/home1/socuser10/2025Soc/week1x_final_project/hardware/31.RV32I_tbman_tests/sim/func_sim/simv.daidir/vcs_rebuild'.
-216   "vcs '-full64' '-debug_acc+all' '-sverilog' '-kdb' '-timescale=1ns/1ns' '+define+SIM' '-f' 'run.f' 2>&1"
-217 DVDI_is_vir_unload_enabled is enable
-218 FSDB_VCS_ENABLE_NATIVE_VC is enable
-219 sps_call_fsdbDumpvars_vd_main at 0 : ../../testbench/c_tests_tb.v(126)
-220 argv[0]: (0)
-221 *Verdi* : Begin traversing the scopes, layer (0).
-222 *Verdi* : End of traversing.
-223 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.030 sys,  0.120 user,  388.14M mem
-                   incr: 0.000 sys,  0.010 user,  9.23M mem
-                   accu: 0.000 sys,  0.010 user,  9.23M mem
-              accu incr: 0.000 sys,  0.010 user,  9.23M mem
+argv[1]=+hex_file=dhrystone.hex
+193 profile - 100
+          CPU/Mem usage: 0.030 sys,  0.120 user,  287.19M mem
+194 Elapsed time:    0:00:00    Wed Jun 11 03:27:27 2025
+195 User CPU time used: 0 seconds
+196 System CPU time used: 0 seconds
+197 pliAppInit
+198 [SC]Init: MemoryConsumed=0.00MB ElapsedTime=0hour 0min. 0sec.
+199 FSDB_GATE is set.
+200 FSDB_RTL is set.
+201 FSDB_FIELDTYPE is set.
+202 FSDB_ALIAS_ARRAY_ELEM is set to 4294967295.
+203 Enable Parallel Dumping.
+204 pliAppMiscSet: New Sim Round
+205 pliEntryInit
+206 LIBSSCORE=found /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/lib/LINUXAMD64/libsscore_vcs202109.so through $NOVAS_HOME setting.
+207 FSDB Dumper for VCS, Release Verdi_S-2021.09-SP2-9, Linux x86_64/64bit, 03/29/2023
+208 (C) 1996 - 2023 by Synopsys, Inc.
+209 sps_call_fsdbDumpfile_main at 0 : ../../testbench/c_tests_tb.v(125)
+210 argv[0]: (wave.fsdb)
+211 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+212 *Verdi* : Create FSDB file 'wave.fsdb'
+213 [spi_vcs_vd_ppi_create_root]: no upf option
+214 compile option from '/home1/socuser10/2025Soc/week1x_final_project/hardware/31.RV32I_tbman_tests/sim/func_sim/simv.daidir/vcs_rebuild'.
+215   "vcs '-full64' '-debug_acc+all' '-sverilog' '-kdb' '-timescale=1ns/1ns' '-f' 'run.f' 2>&1"
+216 DVDI_is_vir_unload_enabled is enable
+217 FSDB_VCS_ENABLE_NATIVE_VC is enable
+218 sps_call_fsdbDumpvars_vd_main at 0 : ../../testbench/c_tests_tb.v(126)
+219 argv[0]: (0)
+220 *Verdi* : Begin traversing the scopes, layer (0).
+221 *Verdi* : End of traversing.
+222 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.040 sys,  0.120 user,  388.14M mem
+                   incr: 0.010 sys,  0.000 user,  9.23M mem
+                   accu: 0.010 sys,  0.000 user,  9.23M mem
+              accu incr: 0.010 sys,  0.000 user,  9.23M mem
 
           Count usage: 1334 var,  1061 idcode,  242 callback
                  incr: 1334 var,  1061 idcode,  242 callback
                  accu: 1334 var,  1061 idcode,  242 callback
             accu incr: 1334 var,  1061 idcode,  242 callback
-224 Elapsed time:    0:00:00    Tue Jun 10 19:07:35 2025
-225 User CPU time used: 0 seconds
-226 System CPU time used: 0 seconds
-227 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.030 sys,  0.120 user,  389.19M mem
+223 Elapsed time:    0:00:00    Wed Jun 11 03:27:27 2025
+224 User CPU time used: 0 seconds
+225 System CPU time used: 0 seconds
+226 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.040 sys,  0.120 user,  389.19M mem
                    incr: 0.000 sys,  0.000 user,  1.05M mem
-                   accu: 0.000 sys,  0.010 user,  10.29M mem
+                   accu: 0.010 sys,  0.000 user,  10.29M mem
               accu incr: 0.000 sys,  0.000 user,  1.05M mem
 
           Count usage: 1334 var,  1061 idcode,  242 callback
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 1334 var,  1061 idcode,  242 callback
             accu incr: 0 var,  0 idcode,  0 callback
-228 Elapsed time:    0:00:00    Tue Jun 10 19:07:35 2025
-229 User CPU time used: 0 seconds
-230 System CPU time used: 0 seconds
-231 End of simulation at 304290
-232 Memory usage: 471.011 M
-233 Maximum resident set size: 129 MB
-234 Hard page faults: 0
-235 Soft page faults: 15283
-236 Elapsed time:    0:00:00    Tue Jun 10 19:07:35 2025
-237 User CPU time used: 0 seconds
-238 System CPU time used: 0 seconds
-239 Begin FSDB profile info:
-240 FSDB Writer : bc1(118761) bcn(657351) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.071462) io wait(0.000000) theadpool wait(0.000000)
+227 Elapsed time:    0:00:00    Wed Jun 11 03:27:27 2025
+228 User CPU time used: 0 seconds
+229 System CPU time used: 0 seconds
+230 End of simulation at 7699590
+231 Memory usage: 533.647 M
+232 Maximum resident set size: 207 MB
+233 Hard page faults: 0
+234 Soft page faults: 35071
+235 Elapsed time:    0:00:06    Wed Jun 11 03:27:33 2025
+236 User CPU time used: 7 seconds
+237 System CPU time used: 0 seconds
+238 Begin FSDB profile info:
+239 FSDB Writer : bc1(4387784) bcn(16780646) mtf/stf(0/2)
+FSDB Writer elapsed time : flush(0.970000) io wait(0.000000) theadpool wait(0.000000)
 FSDB Writer cpu time : MT Compression : 0
-241 End FSDB profile info
-242 FSDB closed. Name: wave.fsdb Size: 231169
-243 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
-244                      - BlockUsed:8 Acquire:806299 BufferUsed:12320507
-245                      - Flush:3 Expand:0 ProducerWait:0 ConsumerWait:6
-246                      - MainProducerTime:0.432564472 TotalConsumerTime:0.030829028
-247                      - ElapsedTime:0.413928000
-248 Producer   0 profile - BlockUsed:8 Acquire:806299 BufferUsed:12320507
-249 Consumer   0 profile - Affinity:-1 CPUTime:0.030829028 LifeTime:0.190263897 (0.16%)
-250                      - BlockUsed:8 Acquire:806299 BufferUsed:12320507
-251 SimExit
-252 Elapsed time:    0:00:00    Tue Jun 10 19:07:35 2025
-253 User CPU time used: 0 seconds
-254 System CPU time used: 0 seconds
-255 Sim process exit
+240 End FSDB profile info
+241 FSDB closed. Name: wave.fsdb Size: 2340510
+242 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
+243                      - BlockUsed:169 Acquire:21938147 BufferUsed:328706897
+244                      - Flush:3 Expand:0 ProducerWait:0 ConsumerWait:147
+245                      - MainProducerTime:6.699501723 TotalConsumerTime:1.375784510
+246                      - ElapsedTime:6.688799000
+247 Producer   0 profile - BlockUsed:169 Acquire:21938147 BufferUsed:328706897
+248 Consumer   0 profile - Affinity:-1 CPUTime:1.375784510 LifeTime:6.219549922 (0.22%)
+249                      - BlockUsed:169 Acquire:21938147 BufferUsed:328706897
+250 SimExit
+251 Elapsed time:    0:00:07    Wed Jun 11 03:27:34 2025
+252 User CPU time used: 7 seconds
+253 System CPU time used: 0 seconds
+254 Sim process exit

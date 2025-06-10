@@ -152,7 +152,6 @@ module riscvpipeline(
         .MemWriteM(MemWriteM),      // MEM 단계 메모리 쓰기 신호
         .InstrD(InstrD)                  // 디코딩된 명령어
     );
-// 제거해줘야 할 코드 예시
 
 
 endmodule

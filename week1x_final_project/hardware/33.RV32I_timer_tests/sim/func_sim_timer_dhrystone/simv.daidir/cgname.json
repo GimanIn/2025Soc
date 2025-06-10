@@ -11,18 +11,6 @@
         "module",
         2
     ],
-    "branch_logic": [
-        "branch_logic",
-        "swNKB",
-        "module",
-        3
-    ],
-    "controller": [
-        "controller",
-        "KBY0m",
-        "module",
-        4
-    ],
     "data_mux": [
         "data_mux",
         "Dxf2Z",

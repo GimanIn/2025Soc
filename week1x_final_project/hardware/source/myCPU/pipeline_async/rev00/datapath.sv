@@ -1,4 +1,5 @@
 
+
 module datapath(
     clk,
     n_rst,
@@ -26,7 +27,6 @@ module datapath(
     MemWriteD,     // from controller
     MemWriteM,     // to datamem
     InstrD         // output
-   // Csr
 );
     //parameter RESET_PC = 32'h1000_0000;
     parameter RESET_PC = 32'h1000_0000;
@@ -43,7 +43,6 @@ module datapath(
     input            BranchD, JalD, JalrD;
     input  [2:0]     ImmSrcD;
     input            MemWriteD;
-    //input Csr;
 
     output [31:0]    PCF, ALUResultM, WriteData_d;//BE_WD
     output           Z_flagE, Btaken;
@@ -97,7 +96,6 @@ module datapath(
     wire [31:0] WriteDataM;
     wire [4:0]  RdM;
     wire [31:0] InstrM;
-    wire sltu_result;
 
     // WB
     wire        RegWriteW;
@@ -105,38 +103,8 @@ module datapath(
     wire [31:0] ALUResultW, ReadDataW, PCPlus4W;
     wire [4:0]  RdW;
     wire [31:0] ResultW;
-    
     assign StallD = lwStall;
     assign StallF = lwStall;
-    wire Csr = (InstrE[6:0] == 7'b111_0011) ? 1'b1 : 1'b0;
-    reg [31:0] tohost_csr;
-
-    always @(posedge clk)
-    begin
-        if (Csr==1'b1)
-        begin
-            case(InstrE[14:12])
-            3'b001:tohost_csr<=RD1E_w2;
-            3'b101:tohost_csr<=ImmExtE;
-            default :tohost_csr<=32'h0;
-            endcase
-        end
-        else
-        tohost_csr<=32'h0;
-    end
-    /*always @(posedge clk or negedge n_rst) begin
-        if (!n_rst) begin
-            tohost_csr <= 32'b0;  
-        end 
-        else if (Csr) begin
-            case (InstrE[14:12])
-                3'b001: tohost_csr <= RD1E_w2; // CSRRW
-                3'b101: tohost_csr <= ImmExtE;  // CSRRWI
-                default: tohost_csr <= tohost_csr;
-            endcase
-        end
-    end*/
-
 
 
     // -----------------------------------
@@ -170,7 +138,57 @@ module datapath(
 
 
 
-    
+    // Decode → Execute
+   /*ID_EX u_ID_EX(
+    // clock & reset
+    .clk         (clk),
+    .n_rst       (n_rst),
+
+    // ----------------------------
+    // 입력 포트 (ID → EX)
+    // ----------------------------
+    .FlushE      (FlushE),         // [ADD] flush 신호
+    .PCPlus4D    (PCPlus4D),       // ID stage PC+4
+    .RD1D_w      (RD1D_w),         // Decode-stage 포워딩 후 값
+    .RD2D_w      (RD2D_w),
+    .ImmExtD     (ImmExtD),
+    .PCD         (PCD),
+    .InstrD      (InstrD),
+    .RdD         (InstrD[11:7]),
+    .Rs1D        (InstrD[19:15]),
+    .Rs2D        (InstrD[24:20]),
+    .ALUControlD (ALUControlD),
+    .ALUSrcAD    (ALUSrcAD),
+    .ALUSrcBD    (ALUSrcBD),
+    .MemWriteD   (MemWriteD),
+    .RegWriteD   (RegWriteD),
+    .ResultSrcD  (ResultSrcD),
+    .BranchD     (BranchD),
+    .JalD        (JalD),
+    .JalrD       (JalrD),
+
+    // ----------------------------
+    // 출력 포트 (EX stage 로 전달)
+    // ----------------------------
+    .PCPlus4E    (PCPlus4E),
+    .RD1E_w      (RD1E_w),
+    .RD2E_w      (RD2E_w),
+    .ImmExtE     (ImmExtE),
+    .PCE         (PCE),
+    .InstrE      (InstrE),
+    .RdE         (RdE),
+    .Rs1E        (Rs1E),
+    .Rs2E        (Rs2E),
+    .ALUControlE (ALUControlE),
+    .ALUSrcAE    (ALUSrcAE),
+    .ALUSrcBE    (ALUSrcBE),
+    .MemWriteE   (MemWriteE),
+    .RegWriteE   (RegWriteE),
+    .ResultSrcE  (ResultSrcE),
+    .BranchE     (BranchE),
+    .JalE        (JalE),
+    .JalrE       (JalrE)
+);*/
 ID_EX u_ID_EX(
     .clk         (clk),
     .n_rst       (n_rst),
@@ -396,7 +414,6 @@ ID_EX u_ID_EX(
         .b_in       (SrcBE),
         .ALUControl (ALUControlE),
         .result     (ALUResultE),
-        //.sltu_result(sltu_result),
         .aZ         (Z_flagE),
         .aN         (N_flagE),
         .aC         (C_flagE),
@@ -415,7 +432,6 @@ ID_EX u_ID_EX(
     // Branch Logic
     branch_logic u_branch_logic(
         .funct3 (InstrE[14:12]),
-        //.sltu_result(sltu_result),
         .Branch (BranchE),
         .jalE   (JalE),
         .jalrE  (JalrE),
