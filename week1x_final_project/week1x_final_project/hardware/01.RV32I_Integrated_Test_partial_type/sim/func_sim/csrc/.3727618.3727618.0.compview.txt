@@ -1,5 +1,0 @@
-{"vcs1":{"timestamp_begin":1746151655.590819959, "rt":0.13, "ut":0.03, "st":0.03}}
-{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1746151655.355269219}
-{"VCS_COMP_START_TIME": 1746151655.355269219}
-{"VCS_COMP_END_TIME": 1746151656.112361578}
-{"VCS_USER_OPTIONS": "-R -full64 -debug_acc+all -sverilog -timescale=1ns/1ns -f run.f"}

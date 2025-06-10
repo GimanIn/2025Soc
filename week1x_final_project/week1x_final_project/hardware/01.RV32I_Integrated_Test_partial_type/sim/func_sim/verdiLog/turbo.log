@@ -1,3 +1,0 @@
-Command Line: /tools/synopsys_2021/verdi/S-2021.09-SP2-9/platform/LINUXAMD64/bin/Novas -i -simflow -simBin ./simv -simOpt  
-uname(Linux sse506-s1 4.18.0-553.22.1.el8_10.x86_64 #1 SMP Wed Sep 25 09:20:43 UTC 2024 x86_64)
-au time 0.747572 0.620464 0.031131 delta 114970624 114970624 total 660131840 660131840
