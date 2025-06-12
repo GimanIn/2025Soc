@@ -1,0 +1,56 @@
+{
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        1
+    ],
+    "Addr_Decoder": [
+        "Addr_Decoder",
+        "gMGVA",
+        "module",
+        2
+    ],
+    "cla_8bit": [
+        "cla_8bit",
+        "c8pr1",
+        "module",
+        3
+    ],
+    "full_adder": [
+        "full_adder",
+        "BEdzp",
+        "module",
+        4
+    ],
+    "mux3": [
+        "mux3",
+        "rsgQu",
+        "module",
+        5
+    ],
+    "flopr": [
+        "flopr",
+        "RCrG2",
+        "module",
+        6
+    ],
+    "tbman_wrap": [
+        "tbman_wrap",
+        "Ln2ne",
+        "module",
+        7
+    ],
+    "c_tests_tb": [
+        "c_tests_tb",
+        "e7D59",
+        "module",
+        8
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        9
+    ]
+}

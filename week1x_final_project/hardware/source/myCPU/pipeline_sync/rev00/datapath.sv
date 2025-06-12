@@ -30,6 +30,8 @@ module datapath(
 );
     //parameter RESET_PC = 32'h1000_0000;
     parameter RESET_PC = 32'h1000_0000;
+    parameter   RESET_PC_4 = 32'h0fff_fffc;
+    
 
     // -----------------------------------
     // 1) Port 선언 (원본 그대로)
@@ -97,14 +99,22 @@ module datapath(
     wire [31:0] WriteDataM;
     wire [4:0]  RdM;
     wire [31:0] InstrM;
+    wire [31:0] InstrW;
     wire sltu_result;
-
+    wire [31:0] Instr_1d;
+    wire Stall_1d;
+    wire FlushD_1d;
+    wire [31:0] NOP;
+    wire [1:0] Instr_sel;
     // WB
     wire        RegWriteW;
     wire [1:0]  ResultSrcW;
     wire [31:0] ALUResultW, ReadDataW, PCPlus4W;
     wire [4:0]  RdW;
     wire [31:0] ResultW;
+   assign NOP = 32'h00000013;
+
+
     
     assign StallD = lwStall;
     assign StallF = lwStall;
@@ -144,16 +154,9 @@ module datapath(
     // -----------------------------------
     IF_ID u_IF_ID(
     .clk       (clk),
-    .n_rst     (n_rst),
-    
-    .PCF       (PCF),
-    .RDF       (Instr),
     .PCPlus4F  (PCPlus4F),
     .StallD    (StallD),  // load‑use hazard 시 stall
     .FlushD    (FlushD),   // branch taken 시 flush
-    
-    .InstrD    (InstrD),
-    .PCD       (PCD),
     .PCPlus4D  (PCPlus4D)
     );
     
@@ -173,8 +176,8 @@ module datapath(
     
 ID_EX u_ID_EX(
     .clk         (clk),
-    .n_rst       (n_rst),
-    .StallE      (lwStall),       // [ADD] stall 신호
+    //.n_rst       (n_rst),
+    //.StallE      (lwStall),       // [ADD] stall 신호
     .FlushE      (FlushE),        // flush 신호
     .PCPlus4D    (PCPlus4D),
     .RD1D_w      (RD1D_w),
@@ -194,6 +197,7 @@ ID_EX u_ID_EX(
     .BranchD     (BranchD),
     .JalD        (JalD),
     .JalrD       (JalrD),
+
     .PCPlus4E    (PCPlus4E),
     .RD1E_w      (RD1E_w),
     .RD2E_w      (RD2E_w),
@@ -218,7 +222,7 @@ ID_EX u_ID_EX(
 
     EX_MEM u_EX_MEM(
         .clk         (clk),
-        .n_rst       (n_rst),
+        
         .RegWriteE   (RegWriteE),
         .ResultSrcE  (ResultSrcE),
         .MemWriteE   (MemWriteE),
@@ -239,7 +243,7 @@ ID_EX u_ID_EX(
 
     MEM_WB u_MEM_WB(
         .clk         (clk),
-        .n_rst       (n_rst),
+        .InstrM      (InstrM),
         .RegWriteM   (RegWriteM),
         .ResultSrcM  (ResultSrcM),
         .ALUResultM  (ALUResultM),
@@ -250,6 +254,7 @@ ID_EX u_ID_EX(
         .ResultSrcW  (ResultSrcW),
         .ALUResultW  (ALUResultW),
         .ReadDataW   (ReadDataW),
+        .InstrW      (InstrW),
         .RdW         (RdW),
         .PCPlus4W    (PCPlus4W)
     );
@@ -411,6 +416,46 @@ ID_EX u_ID_EX(
         .sel(ResultSrcW),
         .out(ResultW)
     );
+    PC_1d u_PC_1d(
+	    .clk(clk),
+        .stall(lwStall),
+	    .PC(PCF),
+	    .PC_1d(PCD)
+    );
+    flush_1d u_flush_1d(
+	    .clk(clk),
+	    .flush(FlushD),
+	    .flush_1d(FlushD_1d)
+    );
+
+    stall_1d u_stall_1d(
+	    .clk(clk),
+	    .stall(lwStall),
+	    .stall_1d(Stall_1d)
+    );
+
+    instr_1d u_instr_1d(
+	    .clk(clk),
+	    .instr(Instr),
+	    .instr_1d(Instr_1d)
+    );
+
+    instr_dec # (
+        .RESET_PC (RESET_PC),
+        .RESET_PC_4 (RESET_PC_4)
+    ) u_instr_dec(
+        .FlushD_1d(FlushD_1d),
+        .Stall_1d(Stall_1d),
+        .PCF(PCF),
+        .instr_sel(Instr_sel)
+    );
+    mux3 u_Instr_mux3(
+        .in0(Instr),
+        .in1(Instr_1d),
+        .in2(NOP),
+        .sel(Instr_sel),
+        .out(InstrD)
+    );
 
     // Branch Logic
     branch_logic u_branch_logic(
@@ -427,8 +472,25 @@ ID_EX u_ID_EX(
     );
     assign Btaken = (PCSrc != 2'b00);
 
-    // Byte Enable Logic
-    BE_logic u_BE_logic(
+    
+
+    BE_store u_be_store (
+    .AddrLast2     (ALUResultM[1:0]),   // 주소 하위 2비트
+    .funct3        (InstrM[14:12]),     // funct3 필드
+    .WD            (WriteDataM),        // 메모리에 저장할 원본 데이터
+    .BE            (ByteEnable),        // 바이트 활성화 신호 (output)
+    .BE_WD         (BE_WD)              // 바이트 정렬된 저장 데이터 (output)
+    );
+
+    BE_load u_be_load (
+    .AddrLast2     (ALUResultW[1:0]),   // 주소 하위 2비트 (byte alignment)
+    .funct3        (InstrW[14:12]),     // load 명령의 funct3 필드
+    .RD            (ReadDataM),         // 메모리로부터 읽은 원본 데이터ReadDataW
+    .BE_RD         (BE_RD)             // 바이트 정렬된 읽기 데이터 (출력)
+    );
+
+
+    /*BE_logic u_BE_logic(
         .clk        (clk),
         .n_rst      (n_rst),
         //.opcode(opcode),
@@ -439,7 +501,8 @@ ID_EX u_ID_EX(
         .BE_WD      (BE_WD),
         .BE_RD      (BE_RD),
         .BE         (ByteEnable)
-    );
+    );*/
+    
     
 
 endmodule

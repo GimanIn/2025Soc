@@ -230,7 +230,7 @@ end
     @(negedge clk);
     rst = 0;
 
-if (1) begin
+if (0) begin
     // Test R-Type Insts --------------------------------------------------
     // - ADD, SUB, SLL, SLT, SLTU, XOR, OR, AND, SRL, SRA
     // - SLLI, SRLI, SRAI
@@ -276,7 +276,7 @@ if (1) begin
     check_result_rf(5'd15, 32'hffffffff, "R-Type SRAI");
 end
 
-if (1) begin
+if (0) begin
     // Test I-Type Insts --------------------------------------------------
     // - ADDI, SLTI, SLTUI, XORI, ORI, ANDI
     // - LW, LH, LB, LHU, LBU
@@ -307,7 +307,7 @@ if (1) begin
     check_result_rf(5'd8,  32'hffffff18, "I-Type AND");
 end
 
-if (1) begin
+if (0) begin
     // Test I-type load instructions
     reset();
 

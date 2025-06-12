@@ -33,11 +33,19 @@
 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/bin/vcs1
 /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/verdi.tab
 run.f
-45
+60
 which_declare=declare -f
-XDG_SESSION_ID=3884
+XRDP_SOCKET_PATH=/run/xrdp/1014
+XRDP_SESSION=3807433
+XRDP_PULSE_SOURCE_SOCKET=xrdp_chansrv_audio_in_socket_10
+XRDP_PULSE_SINK_SOCKET=xrdp_chansrv_audio_out_socket_10
+XMODIFIERS=@im=ibus
+XDG_SESSION_ID=c260
 XDG_RUNTIME_DIR=/run/user/1014
+XDG_MENU_PREFIX=gnome-
 XDG_DATA_DIRS=/home1/socuser10/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+XDG_CURRENT_DESKTOP=GNOME
+VTE_VERSION=5204
 VMR_MODE_FLAG=64
 VERDI_HOME=/tools/synopsys_2021/verdi/S-2021.09-SP2-9
 VCS_PATHMAP_PRELOAD_DONE=1
@@ -52,39 +60,46 @@ VCS_ARCH=linux64
 UNAME=/bin/uname
 TOOL_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64
 SYNOPSYS_LC_ROOT=/tools/synopsys_2021/lc/S-2021.06-SP5
-SSH_TTY=/dev/pts/18
-SSH_CONNECTION=182.230.93.220 51954 192.168.0.170 22
-SSH_CLIENT=182.230.93.220 51954 22
+SSH_AUTH_SOCK=/run/user/1014/keyring/ssh
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SSH_AGENT_PID=3807661
 SNPS_VCS_CLANG_PATH=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/clang
 SNPS_INTERNAL_VCS_LINUX_OS=linux
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/3807473,unix/unix:/tmp/.ICE-unix/3807473
 SCRNAME=vcs
 SCRIPT_NAME=vcs
+QT_IM_MODULE=ibus
+PULSE_SCRIPT=/etc/xrdp/pulse/default.pa
 PT_HOME=/tools/synopsys_2021/prime/S-2021.06-SP5-2
 OVA_UUM=0
 OS_LDFLAGS=
 MFLAGS=
-MAKE_TERMOUT=/dev/pts/18
-MAKE_TERMERR=/dev/pts/18
+MAKE_TERMOUT=/dev/pts/13
+MAKE_TERMERR=/dev/pts/13
 MAKELEVEL=1
 MAKEFLAGS=
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 LC_ALL=C
 ICC2_HOME=/tools/synopsys_2021/icc2/S-2021.06-SP5-1
 HISTCONTROL=ignoredups
-GDK_BACKEND=x11
+GNOME_TERMINAL_SERVICE=:1.83
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/af7b93b1_494c_4aa5_8b20_a0b7a19cb807
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GJS_DEBUG_TOPICS=JS ERROR;JS LOG
+GJS_DEBUG_OUTPUT=stderr
 FM_HOME=/tools/synopsys_2021/fm/S-2021.06-SP5
 DVE_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/gui/dve
 DEBUGINFOD_URLS=https://debuginfod.centos.org/ 
 DC_HOME=/tools/synopsys_2021/syn/S-2021.06-SP5-5
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-j84yNSgtop,guid=682c18c107a6c3616e57849e684869ae
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1014/bus
+COLORTERM=truecolor
 BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@_}
 0
 0
 29
 1749550839 mem_path.vh
 1749550839 opcode.vh
-1749550839 ../../testbench/cpu_tb.v
+1749718779 ../../testbench/cpu_tb.v
 1749550839 ../../../source/myCPU/pipeline_async/rev01/building_blocks/flopenr.sv
 1749550839 ../../../source/myCPU/pipeline_async/rev01/building_blocks/flopr.sv
 1749550839 ../../../source/myCPU/pipeline_async/rev01/building_blocks/extend.sv
@@ -116,5 +131,5 @@ BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty
 1681355912 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/liberrorinf.so
 1681355870 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libsnpsmalloc.so
 1681355909 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libvfs.so
-1749579559 simv.daidir
+1749718838 simv.daidir
 -1 partitionlib

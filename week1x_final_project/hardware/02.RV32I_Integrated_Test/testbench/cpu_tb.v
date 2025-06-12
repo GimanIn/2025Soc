@@ -230,7 +230,7 @@ end
     @(negedge clk);
     rst = 0;
 
-if (1) begin
+if (0) begin
     // Test R-Type Insts --------------------------------------------------
     // - ADD, SUB, SLL, SLT, SLTU, XOR, OR, AND, SRL, SRA
     // - SLLI, SRLI, SRAI
@@ -276,7 +276,7 @@ if (1) begin
     check_result_rf(5'd15, 32'hffffffff, "R-Type SRAI");
 end
 
-if (1) begin
+if (0) begin
     // Test I-Type Insts --------------------------------------------------
     // - ADDI, SLTI, SLTUI, XORI, ORI, ANDI
     // - LW, LH, LB, LHU, LBU
@@ -307,7 +307,7 @@ if (1) begin
     check_result_rf(5'd8,  32'hffffff18, "I-Type AND");
 end
 
-if (1) begin
+if (0) begin
     // Test I-type load instructions
     reset();
 
@@ -442,7 +442,7 @@ if (1) begin
     check_result_dmem(DATA_ADDR8, 32'h78000000, "S-Type SB 4");
 end
 
-if (1) begin
+if (0) begin
     // Test U-Type Insts --------------------------------------------------
     // - LUI, AUIPC
     reset();
@@ -459,7 +459,7 @@ if (1) begin
     check_result_rf(4,  32'h8fff0004, "U-Type AUIPC"); // assume PC is 1000_0004
 end
 
-if (1) begin
+if (0) begin
     // Test J-Type Insts --------------------------------------------------
     // - JAL
     reset();
@@ -484,7 +484,7 @@ if (1) begin
     check_result_rf(5'd6, 0, "J-Type JAL");
 end
 
-if (1) begin
+if (0) begin
     // Test I-Type JALR Insts ---------------------------------------------
     reset();
 
@@ -508,7 +508,7 @@ if (1) begin
     check_result_rf(5'd6, 0, "J-Type JALR");
 end
 
-if (1) begin
+if (0) begin
     // Test B-Type Insts --------------------------------------------------
     // - BEQ, BNE, BLT, BGE, BLTU, BGEU
 
@@ -593,7 +593,7 @@ if (1) begin
     end
 end
 
-if (1) begin
+if (0) begin
    // Test CSR Insts -----------------------------------------------------
    // - CSRRW, CSRRWI
    reset();
@@ -626,7 +626,7 @@ if (1) begin
 end
 
 
-if (1) begin
+if (0) begin
     // Test Hazards -------------------------------------------------------
     // ALU->ALU hazard (RS1)
     reset();

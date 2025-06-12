@@ -1,0 +1,130 @@
+0
+32
++itf+/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/vcsdp_lite.tab
++vcsd1
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/tools/synopsys_2021/vcs/S-2021.09-SP2-9/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libvirsim.so /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/liberrorinf.so /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libsnpsmalloc.so /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=/tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/pli.a -ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/tools/synopsys_2021/vcs/S-2021.09-SP2-9/include
+-Mxllcflags=
+-P
+-debug_acc+all
+-f run.f
+-fsdb
+-full64
+-gen_obj
+-picarchive
+-sverilog
+-timescale=1ns/1ns
+/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/bin/vcs1
+/tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/verdi.tab
+run.f
+45
+which_declare=declare -f
+XDG_SESSION_ID=3947
+XDG_RUNTIME_DIR=/run/user/1014
+XDG_DATA_DIRS=/home1/socuser10/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+VMR_MODE_FLAG=64
+VERDI_HOME=/tools/synopsys_2021/verdi/S-2021.09-SP2-9
+VCS_PATHMAP_PRELOAD_DONE=1
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9
+VCS_EXEC_DONE=1
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=linux64
+UNAME=/bin/uname
+TOOL_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64
+SYNOPSYS_LC_ROOT=/tools/synopsys_2021/lc/S-2021.06-SP5
+SSH_TTY=/dev/pts/16
+SSH_CONNECTION=182.230.93.220 55347 192.168.0.170 22
+SSH_CLIENT=182.230.93.220 55347 22
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SNPS_VCS_CLANG_PATH=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/clang
+SNPS_INTERNAL_VCS_LINUX_OS=linux
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+PT_HOME=/tools/synopsys_2021/prime/S-2021.06-SP5-2
+OVA_UUM=0
+OS_LDFLAGS=
+MFLAGS=
+MAKE_TERMOUT=/dev/pts/16
+MAKE_TERMERR=/dev/pts/16
+MAKELEVEL=1
+MAKEFLAGS=
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+ICC2_HOME=/tools/synopsys_2021/icc2/S-2021.06-SP5-1
+HISTCONTROL=ignoredups
+GDK_BACKEND=x11
+FM_HOME=/tools/synopsys_2021/fm/S-2021.06-SP5
+DVE_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/gui/dve
+DEBUGINFOD_URLS=https://debuginfod.centos.org/ 
+DC_HOME=/tools/synopsys_2021/syn/S-2021.06-SP5-5
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-ffSBkxrLGU,guid=d4286c514f10b63728c1b01c684a7091
+BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@_}
+0
+0
+40
+1749550839 mem_path.vh
+1749550839 ../../testbench/c_tests_tb.v
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/12peripheral_timer/TimerCounter.v
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/10peripheral_tbman/tbman_regs.v
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/10peripheral_tbman/tbman_apbs.v
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/10peripheral_tbman/tbman_wrap.v
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/building_blocks/flopenr.sv
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/building_blocks/flopr.sv
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/building_blocks/extend.sv
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/building_blocks/mux2.sv
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/building_blocks/mux3.sv
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/building_blocks/adder.sv
+1749657735 ../../../source/myCPU/pipeline_sync/rev00/building_blocks/BE_load.sv
+1749656769 ../../../source/myCPU/pipeline_sync/rev00/building_blocks/BE_store.sv
+1749715000 ../../../source/myCPU/pipeline_sync/rev00/instr_dec.sv
+1749656165 ../../../source/myCPU/pipeline_sync/rev00/instr_1d.sv
+1749656205 ../../../source/myCPU/pipeline_sync/rev00/PC_1d.sv
+1749656183 ../../../source/myCPU/pipeline_sync/rev00/stall_1d.sv
+1749656157 ../../../source/myCPU/pipeline_sync/rev00/flush_1d.sv
+1749710692 ../../../source/myCPU/pipeline_sync/rev00/hazard_unit.sv
+1749720401 ../../../source/myCPU/pipeline_sync/rev00/MEM_WB.sv
+1749710213 ../../../source/myCPU/pipeline_sync/rev00/IF_ID.sv
+1749712352 ../../../source/myCPU/pipeline_sync/rev00/EX_MEM.sv
+1749711463 ../../../source/myCPU/pipeline_sync/rev00/ID_EX.sv
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/Addr_Decoder.sv
+1749653934 ../../../source/myCPU/pipeline_sync/rev00/data_mux.sv
+1749653762 ../../../source/myCPU/pipeline_sync/rev00/reg_file_async.v
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/riscvpipeline.sv
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/controller.sv
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/alu.sv
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/aludec.sv
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/branch_logic.sv
+1749580345 ../../../source/myCPU/pipeline_sync/rev00/maindec.sv
+1749722144 ../../../source/myCPU/pipeline_sync/rev00/datapath.sv
+1749655365 ../../../source/myCPU/pipeline_sync/rev00/dualport_mem_synch_rw_dualclk.sv
+1749720780 ../../../source/myCPU/pipeline_sync/rev00/SMU_RV32I_System.v
+1749550839 ./sim_define.v
+1749722272 run.f
+1680083496 /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/verdi.tab
+1681355180 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/vcsdp_lite.tab
+4
+1681356829 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libvirsim.so
+1681355912 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/liberrorinf.so
+1681355870 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libsnpsmalloc.so
+1681355909 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libvfs.so
+1749722299 simv.daidir
+-1 partitionlib

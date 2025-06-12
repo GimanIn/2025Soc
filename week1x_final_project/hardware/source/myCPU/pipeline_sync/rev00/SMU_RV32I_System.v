@@ -115,25 +115,25 @@ module SMU_RV32I_System (
       .q1       (ReadData)
     );*/
    
-    ASYNC_RAM_DP_WBE #(
-        .DWIDTH (DWIDTH),
-        .AWIDTH (AWIDTH),
-        .MIF_HEX (MIF_HEX)
-    ) imem (
-      .clk      (clk),
-      .addr0    (PC[AWIDTH+2-1:2]),
-      .addr1    (DataAdr[AWIDTH+2-1:2]),
-      .wbe0     (4'd0),
-      .wbe1     (ByteEnable),
-      //.wbe1     (4'hF),
-      .d0       (32'd0),
-      .d1       (WriteData_d),
-      //.d1   (BE_WD),
-      .wen0     (1'b0),
-      .wen1     (MemWriteM & ~cs_dmem_n), // ~cs_mem_n &
-      .q0       (Instr),
-      .q1       (ReadData_dmem)
+    dualport_mem_synch_rw_dualclk #(
+      .DATA_WIDTH(DWIDTH),
+      .ADDRESS_WIDTH(AWIDTH),
+      .MIF_HEX (MIF_HEX)
+    )imem (
+        .clk1(clk),
+        .clk2(clk),
+        .addr1(PC[AWIDTH+2-1:2]),
+        .addr2(DataAdr[AWIDTH+2-1:2]),
+        .be1(4'd0),
+        .be2(ByteEnable),
+        .data_in1(32'd0),
+        .data_in2(WriteData_d),
+        .we1(1'b0),
+        .we2(~cs_dmem_n & MemWriteM),
+        .data_out1(Instr),
+        .data_out2(ReadData_dmem)
     );
+
     Addr_Decoder addr_decoder (  
       .Addr(DataAdr),
       .cs_dmem_n(cs_dmem_n),
@@ -141,8 +141,9 @@ module SMU_RV32I_System (
       .cs_tbman_n(cs_tbman_n)
     );
     data_mux data_multiplexer (
-      .cs_dmem_n(cs_dmem_n),
-      .read_data_dmem(ReadData_dmem),
+      //.cs_dmem_n(cs_dmem_n),
+      .clk(clk),
+      .read_data_mem(ReadData_dmem),
       .cs_tbman_n(cs_tbman_n),
       .read_data_tbman(tbman_rdata), // 연결된 tbman의 읽기 데이터\
       .cs_timer_n(cs_timer_n),
