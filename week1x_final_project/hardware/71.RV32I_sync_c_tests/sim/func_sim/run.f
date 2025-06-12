@@ -12,7 +12,7 @@
 ../../../source/myCPU/pipeline_sync/rev00/reg_file_async.v
 ../../../source/myCPU/pipeline_sync/rev00/data_mux.sv
 //../../../source/myCPU/pipeline_sync/rev00/mem_path.vh
-../../../source/myCPU/pipeline_sync/rev00/Addr_Decoder.sv
+../../../source/myCPU/pipeline_sync/rev00/Addr_Decoder.v
 ../../../source/myCPU/pipeline_sync/rev00/ID_EX.sv
 ../../../source/myCPU/pipeline_sync/rev00/EX_MEM.sv
 ../../../source/myCPU/pipeline_sync/rev00/IF_ID.sv

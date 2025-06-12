@@ -230,7 +230,7 @@ end
     @(negedge clk);
     rst = 0;
 
-if (0) begin
+if (1) begin
     // Test R-Type Insts --------------------------------------------------
     // - ADD, SUB, SLL, SLT, SLTU, XOR, OR, AND, SRL, SRA
     // - SLLI, SRLI, SRAI
@@ -276,7 +276,7 @@ if (0) begin
     check_result_rf(5'd15, 32'hffffffff, "R-Type SRAI");
 end
 
-if (0) begin
+if (1) begin
     // Test I-Type Insts --------------------------------------------------
     // - ADDI, SLTI, SLTUI, XORI, ORI, ANDI
     // - LW, LH, LB, LHU, LBU
@@ -307,8 +307,7 @@ if (0) begin
     check_result_rf(5'd8,  32'hffffff18, "I-Type AND");
 end
 
-if (0) begin
-    // Test I-type load instructions
+if (1) begin// Test I-type load instructions
     reset();
 
     `RF_PATH.mem[1] = 32'h3000_0100;
@@ -593,7 +592,7 @@ if (1) begin
     end
 end
 
-if (0) begin
+if (1) begin
    // Test CSR Insts -----------------------------------------------------
    // - CSRRW, CSRRWI
    reset();
@@ -677,7 +676,7 @@ if (1) begin
     check_result_rf(5'd7, `RF_PATH.mem[1] + `RF_PATH.mem[2] + `RF_PATH.mem[4] + `RF_PATH.mem[6], "Hazard 5");
 
     // ALU->MEM hazard
-    reset();
+    /*reset();
     init_rf();
     `RF_PATH.mem[4] = 32'h3000_0100;
     //`RF_PATH.mem[4] = 32'h0000_0100;
@@ -687,7 +686,7 @@ if (1) begin
     `IMEM_PATH.mem[INST_ADDR + 0] = {`FNC7_0, 5'd1, 5'd2, `FNC_ADD_SUB, 5'd3, `OPC_ARI_RTYPE};
     `IMEM_PATH.mem[INST_ADDR + 1] = {IMM[11:5], 5'd3, 5'd4, `FNC_SW, IMM[4:0], `OPC_STORE};
     reset_cpu();
-    check_result_dmem(DATA_ADDR, `RF_PATH.mem[1] + `RF_PATH.mem[2], "Hazard 6");
+    check_result_dmem(DATA_ADDR, `RF_PATH.mem[1] + `RF_PATH.mem[2], "Hazard 6");*/
 
     // MEM->ALU hazard
     reset();

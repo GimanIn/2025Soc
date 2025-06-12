@@ -257,6 +257,8 @@ ID_EX u_ID_EX(
         .InstrW      (InstrW),
         .RdW         (RdW),
         .PCPlus4W    (PCPlus4W)
+        
+        
     );
 
     // PC 업데이트
@@ -490,18 +492,6 @@ ID_EX u_ID_EX(
     );
 
 
-    /*BE_logic u_BE_logic(
-        .clk        (clk),
-        .n_rst      (n_rst),
-        //.opcode(opcode),
-        .AddrLast2  (ALUResultM[1:0]),
-        .funct3     (InstrM[14:12]),
-        .WD         (WriteDataM),
-        .RD         (ReadDataW),
-        .BE_WD      (BE_WD),
-        .BE_RD      (BE_RD),
-        .BE         (ByteEnable)
-    );*/
     
     
 

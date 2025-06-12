@@ -15,30 +15,38 @@ module BE_load (
                     2'b01: BE_RD = {{24{RD[15]}}, RD[15:8]};
                     2'b10: BE_RD = {{24{RD[23]}}, RD[23:16]};
                     2'b11: BE_RD = {{24{RD[31]}}, RD[31:24]};
+                    default: BE_RD = 32'h0; 
                 endcase
             end
-            3'b100: begin // LBU
-                case (AddrLast2)
-                    2'b00: BE_RD = {24'b0, RD[7:0]};
-                    2'b01: BE_RD = {24'b0, RD[15:8]};
-                    2'b10: BE_RD = {24'b0, RD[23:16]};
-                    2'b11: BE_RD = {24'b0, RD[31:24]};
-                endcase
-            end
+           
             3'b001: begin // LH
                 case (AddrLast2[1])
                     1'b0: BE_RD = {{16{RD[15]}}, RD[15:0]};
                     1'b1: BE_RD = {{16{RD[31]}}, RD[31:16]};
-                endcase
-            end
-            3'b101: begin // LHU
-                case (AddrLast2[1])
-                    1'b0: BE_RD = {16'b0, RD[15:0]};
-                    1'b1: BE_RD = {16'b0, RD[31:16]};
+                    default: BE_RD = 32'h0; 
                 endcase
             end
             3'b010: begin // LW
                 BE_RD = RD;
+            end
+            3'b100: begin // LBU
+                case (AddrLast2)
+                    2'b00: BE_RD = {{24{1'b0}}, RD[7:0]};
+                    2'b01: BE_RD = {{24{1'b0}}, RD[15:8]};
+                    2'b10: BE_RD = {{24{1'b0}}, RD[23:16]};
+                    2'b11: BE_RD = {{24{1'b0}}, RD[31:24]};
+                    default: BE_RD = 32'h0; 
+                endcase
+            end
+            3'b101: begin // LHU
+                case (AddrLast2[1])
+                    1'b0: BE_RD = {{16{1'b0}}, RD[15:0]};
+                    1'b1: BE_RD = {{16{1'b0}}, RD[31:16]};
+                    default: BE_RD = 32'h0;
+                endcase
+            end
+             default: begin
+                BE_RD = 32'h0;
             end
         endcase
     end

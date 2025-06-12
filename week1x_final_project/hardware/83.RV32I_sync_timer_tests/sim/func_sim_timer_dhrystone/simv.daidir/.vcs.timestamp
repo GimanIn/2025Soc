@@ -37,7 +37,7 @@
 run.f
 46
 which_declare=declare -f
-XDG_SESSION_ID=3947
+XDG_SESSION_ID=3988
 XDG_RUNTIME_DIR=/run/user/1014
 XDG_DATA_DIRS=/home1/socuser10/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 VMR_MODE_FLAG=64
@@ -54,9 +54,9 @@ VCS_ARCH=linux64
 UNAME=/bin/uname
 TOOL_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64
 SYNOPSYS_LC_ROOT=/tools/synopsys_2021/lc/S-2021.06-SP5
-SSH_TTY=/dev/pts/16
-SSH_CONNECTION=182.230.93.220 55347 192.168.0.170 22
-SSH_CLIENT=182.230.93.220 55347 22
+SSH_TTY=/dev/pts/13
+SSH_CONNECTION=182.230.93.220 51383 192.168.0.170 22
+SSH_CLIENT=182.230.93.220 51383 22
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
 SNPS_VERDI_INTERNAL_LP_XML_NEW_FLOW=1
 SNPS_VCS_CLANG_PATH=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/clang
@@ -67,8 +67,8 @@ PT_HOME=/tools/synopsys_2021/prime/S-2021.06-SP5-2
 OVA_UUM=0
 OS_LDFLAGS=
 MFLAGS=
-MAKE_TERMOUT=/dev/pts/16
-MAKE_TERMERR=/dev/pts/16
+MAKE_TERMOUT=/dev/pts/13
+MAKE_TERMERR=/dev/pts/13
 MAKELEVEL=1
 MAKEFLAGS=
 LESSOPEN=||/usr/bin/lesspipe.sh %s
@@ -80,7 +80,7 @@ FM_HOME=/tools/synopsys_2021/fm/S-2021.06-SP5
 DVE_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/gui/dve
 DEBUGINFOD_URLS=https://debuginfod.centos.org/ 
 DC_HOME=/tools/synopsys_2021/syn/S-2021.06-SP5-5
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-ffSBkxrLGU,guid=d4286c514f10b63728c1b01c684a7091
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-mxrczwqHNz,guid=b3c14c0d74da4bf2448d702c684b0c37
 BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@_}
 0
 0
@@ -97,19 +97,19 @@ BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty
 1749580345 ../../../source/myCPU/pipeline_sync/rev00/building_blocks/mux2.sv
 1749580345 ../../../source/myCPU/pipeline_sync/rev00/building_blocks/mux3.sv
 1749580345 ../../../source/myCPU/pipeline_sync/rev00/building_blocks/adder.sv
-1749657735 ../../../source/myCPU/pipeline_sync/rev00/building_blocks/BE_load.sv
-1749656769 ../../../source/myCPU/pipeline_sync/rev00/building_blocks/BE_store.sv
+1749725257 ../../../source/myCPU/pipeline_sync/rev00/building_blocks/BE_load.sv
+1749725180 ../../../source/myCPU/pipeline_sync/rev00/building_blocks/BE_store.sv
 1749715000 ../../../source/myCPU/pipeline_sync/rev00/instr_dec.sv
 1749656165 ../../../source/myCPU/pipeline_sync/rev00/instr_1d.sv
 1749656205 ../../../source/myCPU/pipeline_sync/rev00/PC_1d.sv
 1749656183 ../../../source/myCPU/pipeline_sync/rev00/stall_1d.sv
 1749656157 ../../../source/myCPU/pipeline_sync/rev00/flush_1d.sv
-1749710692 ../../../source/myCPU/pipeline_sync/rev00/hazard_unit.sv
-1749720401 ../../../source/myCPU/pipeline_sync/rev00/MEM_WB.sv
+1749728182 ../../../source/myCPU/pipeline_sync/rev00/hazard_unit.sv
+1749727038 ../../../source/myCPU/pipeline_sync/rev00/MEM_WB.sv
 1749710213 ../../../source/myCPU/pipeline_sync/rev00/IF_ID.sv
 1749712352 ../../../source/myCPU/pipeline_sync/rev00/EX_MEM.sv
 1749711463 ../../../source/myCPU/pipeline_sync/rev00/ID_EX.sv
-1749580345 ../../../source/myCPU/pipeline_sync/rev00/Addr_Decoder.sv
+1749744846 ../../../source/myCPU/pipeline_sync/rev00/Addr_Decoder.v
 1749653934 ../../../source/myCPU/pipeline_sync/rev00/data_mux.sv
 1749653762 ../../../source/myCPU/pipeline_sync/rev00/reg_file_async.v
 1749580345 ../../../source/myCPU/pipeline_sync/rev00/riscvpipeline.sv
@@ -118,11 +118,11 @@ BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty
 1749580345 ../../../source/myCPU/pipeline_sync/rev00/aludec.sv
 1749580345 ../../../source/myCPU/pipeline_sync/rev00/branch_logic.sv
 1749580345 ../../../source/myCPU/pipeline_sync/rev00/maindec.sv
-1749722144 ../../../source/myCPU/pipeline_sync/rev00/datapath.sv
+1749728216 ../../../source/myCPU/pipeline_sync/rev00/datapath.sv
 1749655365 ../../../source/myCPU/pipeline_sync/rev00/dualport_mem_synch_rw_dualclk.sv
-1749720780 ../../../source/myCPU/pipeline_sync/rev00/SMU_RV32I_System.v
+1749744922 ../../../source/myCPU/pipeline_sync/rev00/SMU_RV32I_System.v
 1749550839 ./sim_define.v
-1749722532 run.f
+1749745208 run.f
 1680083496 /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/verdi.tab
 1681355180 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/vcsdp_lite.tab
 4
@@ -130,5 +130,5 @@ BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty
 1681355912 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/liberrorinf.so
 1681355870 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libsnpsmalloc.so
 1681355909 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libvfs.so
-1749722576 simv.daidir
+1749748988 simv.daidir
 -1 partitionlib

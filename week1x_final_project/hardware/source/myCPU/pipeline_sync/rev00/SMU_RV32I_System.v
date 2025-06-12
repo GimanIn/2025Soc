@@ -136,9 +136,9 @@ module SMU_RV32I_System (
 
     Addr_Decoder addr_decoder (  
       .Addr(DataAdr),
-      .cs_dmem_n(cs_dmem_n),
-      .cs_timer_n(cs_timer_n),
-      .cs_tbman_n(cs_tbman_n)
+      .CS_MEM_N(cs_dmem_n),
+      .CS_TIMER_N(cs_timer_n),
+      .CS_TBMAN_N(cs_tbman_n)
     );
     data_mux data_multiplexer (
       //.cs_dmem_n(cs_dmem_n),

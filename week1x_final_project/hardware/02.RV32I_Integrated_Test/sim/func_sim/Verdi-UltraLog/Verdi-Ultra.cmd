@@ -121,3 +121,5 @@ wvSetCursor -win $_nWave3 498.846392 -snap {("G2" 0)}
 wvSetCursor -win $_nWave3 544.863117 -snap {("G2" 0)}
 srcDeselectAll -win $_nTrace1
 verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+debExit

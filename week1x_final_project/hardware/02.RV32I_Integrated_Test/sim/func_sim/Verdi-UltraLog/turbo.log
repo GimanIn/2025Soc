@@ -1,2 +1,3 @@
 Command Line: /tools/synopsys_2021/verdi/S-2021.09-SP2-9/platform/LINUXAMD64/bin/Novas -Ultra -sv -f run.f
 uname(Linux sse506-s1 4.18.0-553.22.1.el8_10.x86_64 #1 SMP Wed Sep 25 09:20:43 UTC 2024 x86_64)
+au time 5114.797529 27.784389 59.442623 delta 527499264 527499264 total 1072660480 1072660480

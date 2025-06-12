@@ -83,7 +83,7 @@ ANF: vhdi_enc_ist_get_module_id('./simv: undefined symbol: vhdi_enc_ist_get_modu
 ANF: vhdi_enc_def_get_handle_by_module_id('./simv: undefined symbol: vhdi_enc_def_get_handle_by_module_id')
 VCS compile option:
  option[0]: ./simv
- option[1]: +MIF_FILE=xor.mif
+ option[1]: +MIF_FILE=bge.mif
  option[2]: /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/bin/vcs1
  option[3]: -Mcc=gcc
  option[4]: -Mcplusplus=g++
@@ -127,7 +127,7 @@ Limit information:
 cputime		unlimited
 filesize		unlimited
 datasize		unlimited
-stacksize		8193 kbytes
+stacksize		unlimited
 coredumpsize		0 kbytes
 memoryuse		unlimited
 vmemoryuse		unlimited
@@ -153,7 +153,7 @@ MFLAGS=
 which_declare=declare -f
 XDG_SESSION_ID=3947
 USER=socuser10
-test=all
+test=bge
 DC_HOME=/tools/synopsys_2021/syn/S-2021.06-SP5-5
 SYNOPSYS_LC_ROOT=/tools/synopsys_2021/lc/S-2021.06-SP5
 PWD=/home1/socuser10/2025Soc/week1x_final_project/hardware/61.RV32I_sync_isa_tests/sim/func_sim
@@ -182,7 +182,7 @@ PATH=/tools/synopsys_2021/prime/S-2021.06-SP5-2/bin:/tools/synopsys_2021/fm/S-20
 VCS_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9
 DEBUGINFOD_URLS=https://debuginfod.centos.org/ 
 HISTSIZE=1000
-MAKEFLAGS= -- test=all
+MAKEFLAGS= -- test=bge
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 BASH_FUNC_which%%=() {  ( alias;
  eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
@@ -197,10 +197,10 @@ SPECMAN_OUTPUT_TO_TTY=1
 FLEXLM_BORROWFILE=/home1/socuser10/.sse506-s1-borrow.txt
 Runtime command line arguments:
 argv[0]=./simv
-argv[1]=+MIF_FILE=xor.mif
+argv[1]=+MIF_FILE=bge.mif
 198 profile - 100
           CPU/Mem usage: 0.020 sys,  0.120 user,  287.18M mem
-199 Elapsed time:    0:00:00    Thu Jun 12 18:56:02 2025
+199 Elapsed time:    0:00:00    Thu Jun 12 20:08:29 2025
 200 User CPU time used: 0 seconds
 201 System CPU time used: 0 seconds
 202 pliAppInit
@@ -229,55 +229,55 @@ argv[1]=+MIF_FILE=xor.mif
 225 *Verdi* : Begin traversing the scopes, layer (0).
 226 *Verdi* : End of traversing.
 227 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.030 sys,  0.130 user,  388.11M mem
-                   incr: 0.000 sys,  0.010 user,  9.21M mem
-                   accu: 0.000 sys,  0.010 user,  9.21M mem
-              accu incr: 0.000 sys,  0.010 user,  9.21M mem
+          CPU/Mem usage: 0.030 sys,  0.130 user,  388.09M mem
+                   incr: 0.000 sys,  0.010 user,  9.19M mem
+                   accu: 0.000 sys,  0.010 user,  9.19M mem
+              accu incr: 0.000 sys,  0.010 user,  9.19M mem
 
-          Count usage: 1359 var,  1072 idcode,  238 callback
-                 incr: 1359 var,  1072 idcode,  238 callback
-                 accu: 1359 var,  1072 idcode,  238 callback
-            accu incr: 1359 var,  1072 idcode,  238 callback
-228 Elapsed time:    0:00:00    Thu Jun 12 18:56:02 2025
+          Count usage: 1361 var,  1073 idcode,  239 callback
+                 incr: 1361 var,  1073 idcode,  239 callback
+                 accu: 1361 var,  1073 idcode,  239 callback
+            accu incr: 1361 var,  1073 idcode,  239 callback
+228 Elapsed time:    0:00:00    Thu Jun 12 20:08:29 2025
 229 User CPU time used: 0 seconds
 230 System CPU time used: 0 seconds
 231 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.030 sys,  0.130 user,  389.16M mem
+          CPU/Mem usage: 0.030 sys,  0.130 user,  389.14M mem
                    incr: 0.000 sys,  0.000 user,  1.05M mem
-                   accu: 0.000 sys,  0.010 user,  10.26M mem
+                   accu: 0.000 sys,  0.010 user,  10.24M mem
               accu incr: 0.000 sys,  0.000 user,  1.05M mem
 
-          Count usage: 1359 var,  1072 idcode,  238 callback
+          Count usage: 1361 var,  1073 idcode,  239 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 1359 var,  1072 idcode,  238 callback
+                 accu: 1361 var,  1073 idcode,  239 callback
             accu incr: 0 var,  0 idcode,  0 callback
-232 Elapsed time:    0:00:00    Thu Jun 12 18:56:02 2025
+232 Elapsed time:    0:00:00    Thu Jun 12 20:08:29 2025
 233 User CPU time used: 0 seconds
 234 System CPU time used: 0 seconds
-235 End of simulation at 10350
-236 Memory usage: 389.161 M
+235 End of simulation at 7590
+236 Memory usage: 389.145 M
 237 Maximum resident set size: 120 MB
 238 Hard page faults: 0
-239 Soft page faults: 13230
-240 Elapsed time:    0:00:00    Thu Jun 12 18:56:02 2025
+239 Soft page faults: 13022
+240 Elapsed time:    0:00:00    Thu Jun 12 20:08:29 2025
 241 User CPU time used: 0 seconds
 242 System CPU time used: 0 seconds
 243 Begin FSDB profile info:
-244 FSDB Writer : bc1(8453) bcn(26962) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.013524) io wait(0.000000) theadpool wait(0.000000)
+244 FSDB Writer : bc1(4091) bcn(16843) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.007581) io wait(0.000000) theadpool wait(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 245 End FSDB profile info
-246 FSDB closed. Name: wave.fsdb Size: 51182
+246 FSDB closed. Name: wave.fsdb Size: 45360
 247 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
-248                      - BlockUsed:1 Acquire:36212 BufferUsed:533709
+248                      - BlockUsed:1 Acquire:21454 BufferUsed:318803
 249                      - Flush:3 Expand:0 ProducerWait:0 ConsumerWait:0
-250                      - MainProducerTime:0.185202415 TotalConsumerTime:0.000000000
-251                      - ElapsedTime:0.142807000
-252 Producer   0 profile - BlockUsed:1 Acquire:36212 BufferUsed:533709
+250                      - MainProducerTime:0.180455044 TotalConsumerTime:0.000000000
+251                      - ElapsedTime:0.070447000
+252 Producer   0 profile - BlockUsed:1 Acquire:21454 BufferUsed:318803
 253 Consumer   0 profile - Affinity:-1 CPUTime:0.000000000 LifeTime:0.000000000 (-nan%)
-254                      - BlockUsed:1 Acquire:36212 BufferUsed:533709
+254                      - BlockUsed:1 Acquire:21454 BufferUsed:318803
 255 SimExit
-256 Elapsed time:    0:00:00    Thu Jun 12 18:56:02 2025
+256 Elapsed time:    0:00:00    Thu Jun 12 20:08:29 2025
 257 User CPU time used: 0 seconds
 258 System CPU time used: 0 seconds
 259 Sim process exit

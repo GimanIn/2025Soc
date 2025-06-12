@@ -2,7 +2,7 @@
 ../../../source/myCPU/pipeline_sync/rev00/10peripheral_tbman/tbman_regs.v
 ../../../source/myCPU/pipeline_sync/rev00/10peripheral_tbman/tbman_wrap.v
 ../../../source/myCPU/pipeline_sync/rev00/12peripheral_timer/TimerCounter.v
-../../../source/myCPU/pipeline_sync/rev00/Addr_Decoder.sv
+../../../source/myCPU/pipeline_sync/rev00/Addr_Decoder.v
 ../../../source/myCPU/pipeline_sync/rev00/EX_MEM.sv
 ../../../source/myCPU/pipeline_sync/rev00/ID_EX.sv
 ../../../source/myCPU/pipeline_sync/rev00/IF_ID.sv

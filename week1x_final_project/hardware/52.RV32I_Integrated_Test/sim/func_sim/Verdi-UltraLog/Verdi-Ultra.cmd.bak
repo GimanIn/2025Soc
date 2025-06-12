@@ -1,0 +1,5 @@
+debImport "-sv" "-f" "run.f"
+verdiWindowResize -win $_Verdi_1 "1899" "38" "1920" "2032"
+verdiWindowResize -win $_Verdi_1 "1899" "38" "1920" "2032"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+debExit
